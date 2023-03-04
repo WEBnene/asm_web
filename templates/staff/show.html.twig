@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Staff{% endblock %}
+
+{% block body %}
+    <h1>Staff</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ staff.id }}</td>
+            </tr>
+            <tr>
+                <th>First_name</th>
+                <td>{{ staff.FirstName }}</td>
+            </tr>
+            <tr>
+                <th>Last_name</th>
+                <td>{{ staff.LastName }}</td>
+            </tr>
+            <tr>
+                <th>Birthday</th>
+                <td>{{ staff.Birthday ? staff.Birthday|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Phone_number</th>
+                <td>{{ staff.PhoneNumber }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_staff_index') }}">Back to list</a>
+
+    <a href="{{ path('app_staff_edit', {'id': staff.id}) }}">Edit</a>
+
+    {{ include('staff/_delete_form.html.twig') }}
+{% endblock %}
