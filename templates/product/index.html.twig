@@ -1,11 +1,60 @@
-{% extends 'base.html.twig' %}
+    <header>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css">
+    </head>
+    </header>
+    <body> 
+    <div>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="/customer/">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/staff/">Staffs</a
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/category/">Category</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/bill/">Bill</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/product/">Product</a>
+          </li>
+        </ul> 
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js" ></script>
+    <script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap5.min.js" ></script>
+    <script>
+    $(document).ready(function() {
+      $('#product').DataTable();
+    });
+    </script>
+    </body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Product index</title>
+                <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    </head>
+    <style>
+    h1 {
+    color: #FFFFFF;
+    font-family: verdana;
+    font-size: 200%;
+    }
+    body {
+    background-color: #85DDD1;
+    }
+    </style>
+    <body>
+            <h1>Product list</h1>
+            
+    <a href="/product/new">Create new</a> 
 
-{% block title %}Product index{% endblock %}
-
-{% block body %}
-    <h1>Product list</h1>
-
-    <table class="table">
+    <table id="product" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
                 <th>ID</th>
@@ -17,25 +66,1294 @@
             </tr>
         </thead>
         <tbody>
-        {% for product in products %}
             <tr>
-                <td>{{ product.id }}</td>
-                <td>{{ product.Seri }}</td>
-                <td>{{ product.Name }}</td>
-                <td>{{ product.Price }}</td>
-                <td>{{ product.Quantity }}</td>
+                <td>1</td>
+                <td>101</td>
+                <td>Ginger candy</td>
+                <td>2</td>
+                <td>25</td>
                 <td>
-                    <a href="{{ path('app_product_show', {'id': product.id}) }}">Show</a>
-                    <a href="{{ path('app_product_edit', {'id': product.id}) }}">Edit</a>
+                    <a href="/product/1">Show</a>
+                    <a href="/product/1/edit">Edit</a>
                 </td>
             </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
+                    <tr>
+                <td>2</td>
+                <td>102</td>
+                <td>Bibica Zoo Jelly candy</td>
+                <td>2.1</td>
+                <td>47</td>
+                <td>
+                    <a href="/product/2">Show</a>
+                    <a href="/product/2/edit">Edit</a>
+                </td>
             </tr>
-        {% endfor %}
-        </tbody>
+                    <tr>
+                <td>3</td>
+                <td>103</td>
+                <td>Socola Chocorock candy</td>
+                <td>3.8</td>
+                <td>53</td>
+                <td>
+                    <a href="/product/3">Show</a>
+                    <a href="/product/3/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>4</td>
+                <td>104</td>
+                <td>Socola Ritter Sport candy</td>
+                <td>2.26</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/4">Show</a>
+                    <a href="/product/4/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>5</td>
+                <td>105</td>
+                <td>McGoods Peanut candy</td>
+                <td>2.3</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/5">Show</a>
+                    <a href="/product/5/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>6</td>
+                <td>106</td>
+                <td>Pororo Magic Ring candy</td>
+                <td>1.9</td>
+                <td>15</td>
+                <td>
+                    <a href="/product/6">Show</a>
+                    <a href="/product/6/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>7</td>
+                <td>107</td>
+                <td>Mentos Yogurt Flavored Chewing candy</td>
+                <td>2.5</td>
+                <td>98</td>
+                <td>
+                    <a href="/product/7">Show</a>
+                    <a href="/product/7/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>8</td>
+                <td>108</td>
+                <td>Mentos Fruit Rainbow Chewables candy</td>
+                <td>2.1</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/8">Show</a>
+                    <a href="/product/8/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>9</td>
+                <td>109</td>
+                <td>Caramen Alpenliebe candy</td>
+                <td>2</td>
+                <td>35</td>
+                <td>
+                    <a href="/product/9">Show</a>
+                    <a href="/product/9/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>10</td>
+                <td>110</td>
+                <td>Nestlé KitKat</td>
+                <td>3.25</td>
+                <td>20</td>
+                <td>
+                    <a href="/product/10">Show</a>
+                    <a href="/product/10/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>11</td>
+                <td>111</td>
+                <td>Meiji Milk Chocolate candy</td>
+                <td>5.17</td>
+                <td>54</td>
+                <td>
+                    <a href="/product/11">Show</a>
+                    <a href="/product/11/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>12</td>
+                <td>112</td>
+                <td>M&amp;M Peanut Chocolate candy</td>
+                <td>2.25</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/12">Show</a>
+                    <a href="/product/12/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>13</td>
+                <td>113</td>
+                <td>Ritter Sport Hazelnut Milk Chocolate</td>
+                <td>2.75</td>
+                <td>65</td>
+                <td>
+                    <a href="/product/13">Show</a>
+                    <a href="/product/13/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>14</td>
+                <td>114</td>
+                <td>Sunflower chocolate candy</td>
+                <td>4.29</td>
+                <td>45</td>
+                <td>
+                    <a href="/product/14">Show</a>
+                    <a href="/product/14/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>15</td>
+                <td>115</td>
+                <td>Mixed Alpenliebe candy</td>
+                <td>4.2</td>
+                <td>52</td>
+                <td>
+                    <a href="/product/15">Show</a>
+                    <a href="/product/15/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>16</td>
+                <td>201</td>
+                <td>Snack Lay BBQ</td>
+                <td>0.5</td>
+                <td>25</td>
+                <td>
+                    <a href="/product/16">Show</a>
+                    <a href="/product/16/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>17</td>
+                <td>202</td>
+                <td>MCGoods seaweed snack</td>
+                <td>1.33</td>
+                <td>47</td>
+                <td>
+                    <a href="/product/17">Show</a>
+                    <a href="/product/17/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>18</td>
+                <td>203</td>
+                <td>Shrimp Snack Hanami</td>
+                <td>2.1</td>
+                <td>53</td>
+                <td>
+                    <a href="/product/18">Show</a>
+                    <a href="/product/18/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>19</td>
+                <td>204</td>
+                <td>Cheese popcorn</td>
+                <td>2.5</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/19">Show</a>
+                    <a href="/product/19/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>20</td>
+                <td>205</td>
+                <td>Squid Snack Bento</td>
+                <td>1.5</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/20">Show</a>
+                    <a href="/product/20/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>21</td>
+                <td>206</td>
+                <td>Taokaenoi Spicy Snack</td>
+                <td>1.8</td>
+                <td>15</td>
+                <td>
+                    <a href="/product/21">Show</a>
+                    <a href="/product/21/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>22</td>
+                <td>207</td>
+                <td>Snack Karamucho</td>
+                <td>1.25</td>
+                <td>98</td>
+                <td>
+                    <a href="/product/22">Show</a>
+                    <a href="/product/22/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>23</td>
+                <td>208</td>
+                <td>Ostar Potato Snack</td>
+                <td>1.25</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/23">Show</a>
+                    <a href="/product/23/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>24</td>
+                <td>209</td>
+                <td>Garlic bread snack</td>
+                <td>2.2</td>
+                <td>35</td>
+                <td>
+                    <a href="/product/24">Show</a>
+                    <a href="/product/24/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>25</td>
+                <td>210</td>
+                <td>Honey Poppedcorn Popcorn</td>
+                <td>2.5</td>
+                <td>20</td>
+                <td>
+                    <a href="/product/25">Show</a>
+                    <a href="/product/25/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>26</td>
+                <td>301</td>
+                <td>Café Vinacafé 3in1 Gold Original</td>
+                <td>1.85</td>
+                <td>54</td>
+                <td>
+                    <a href="/product/26">Show</a>
+                    <a href="/product/26/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>27</td>
+                <td>302</td>
+                <td>Creative Coffee</td>
+                <td>4.77</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/27">Show</a>
+                    <a href="/product/27/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>28</td>
+                <td>303</td>
+                <td>Instant coffee 3in1 G7</td>
+                <td>2.13</td>
+                <td>65</td>
+                <td>
+                    <a href="/product/28">Show</a>
+                    <a href="/product/28/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>29</td>
+                <td>304</td>
+                <td>Coffee Nescafe with almond milk</td>
+                <td>2.43</td>
+                <td>45</td>
+                <td>
+                    <a href="/product/29">Show</a>
+                    <a href="/product/29/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>30</td>
+                <td>305</td>
+                <td>Coffee Nescafe hazelnut milk</td>
+                <td>2.47</td>
+                <td>52</td>
+                <td>
+                    <a href="/product/30">Show</a>
+                    <a href="/product/30/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>31</td>
+                <td>306</td>
+                <td>NesCafé Latte Chocolate Instant Milk Coffee</td>
+                <td>2.43</td>
+                <td>25</td>
+                <td>
+                    <a href="/product/31">Show</a>
+                    <a href="/product/31/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>32</td>
+                <td>307</td>
+                <td>Nescafe iced milk coffee</td>
+                <td>4.66</td>
+                <td>47</td>
+                <td>
+                    <a href="/product/32">Show</a>
+                    <a href="/product/32/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>33</td>
+                <td>308</td>
+                <td>NESCAFE Instant Coffee Red Cup</td>
+                <td>6.68</td>
+                <td>53</td>
+                <td>
+                    <a href="/product/33">Show</a>
+                    <a href="/product/33/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>34</td>
+                <td>309</td>
+                <td>Cappuccino mocha G7</td>
+                <td>2.74</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/34">Show</a>
+                    <a href="/product/34/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>35</td>
+                <td>310</td>
+                <td>Passiona Coffee G7</td>
+                <td>2.44</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/35">Show</a>
+                    <a href="/product/35/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>36</td>
+                <td>311</td>
+                <td>Nestle Gold Blend Coffee</td>
+                <td>5.92</td>
+                <td>15</td>
+                <td>
+                    <a href="/product/36">Show</a>
+                    <a href="/product/36/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>37</td>
+                <td>312</td>
+                <td>Instant Coffee Capuccino 4in1 Mr.Viet</td>
+                <td>4.62</td>
+                <td>98</td>
+                <td>
+                    <a href="/product/37">Show</a>
+                    <a href="/product/37/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>38</td>
+                <td>401</td>
+                <td>Lavie natural mineral water</td>
+                <td>4.7</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/38">Show</a>
+                    <a href="/product/38/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>39</td>
+                <td>402</td>
+                <td>Dasani bottled water</td>
+                <td>4.65</td>
+                <td>35</td>
+                <td>
+                    <a href="/product/39">Show</a>
+                    <a href="/product/39/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>40</td>
+                <td>403</td>
+                <td>Aquafina drinking water</td>
+                <td>4.83</td>
+                <td>20</td>
+                <td>
+                    <a href="/product/40">Show</a>
+                    <a href="/product/40/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>41</td>
+                <td>404</td>
+                <td>Aquafina natural mineral water</td>
+                <td>5.33</td>
+                <td>54</td>
+                <td>
+                    <a href="/product/41">Show</a>
+                    <a href="/product/41/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>42</td>
+                <td>405</td>
+                <td>Dasani pure drinking water</td>
+                <td>4.45</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/42">Show</a>
+                    <a href="/product/42/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>43</td>
+                <td>406</td>
+                <td>Dasani mineral water</td>
+                <td>4.87</td>
+                <td>65</td>
+                <td>
+                    <a href="/product/43">Show</a>
+                    <a href="/product/43/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>44</td>
+                <td>407</td>
+                <td>Vivant natural mineral water</td>
+                <td>4.58</td>
+                <td>45</td>
+                <td>
+                    <a href="/product/44">Show</a>
+                    <a href="/product/44/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>45</td>
+                <td>408</td>
+                <td>Perrier mineral water</td>
+                <td>1.5</td>
+                <td>52</td>
+                <td>
+                    <a href="/product/45">Show</a>
+                    <a href="/product/45/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>46</td>
+                <td>501</td>
+                <td>Warrior soft drink grape flavor</td>
+                <td>1.2</td>
+                <td>25</td>
+                <td>
+                    <a href="/product/46">Show</a>
+                    <a href="/product/46/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>47</td>
+                <td>502</td>
+                <td>Warrior soft drink strawberry flavor</td>
+                <td>1.2</td>
+                <td>47</td>
+                <td>
+                    <a href="/product/47">Show</a>
+                    <a href="/product/47/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>48</td>
+                <td>503</td>
+                <td>Aquarius vitamin supplement drink</td>
+                <td>2.62</td>
+                <td>53</td>
+                <td>
+                    <a href="/product/48">Show</a>
+                    <a href="/product/48/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>49</td>
+                <td>504</td>
+                <td>Coconut water CoCoXim</td>
+                <td>1.3</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/49">Show</a>
+                    <a href="/product/49/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>50</td>
+                <td>505</td>
+                <td>Nutri Boost orange flavor</td>
+                <td>1.99</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/50">Show</a>
+                    <a href="/product/50/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>51</td>
+                <td>506</td>
+                <td>Nutri Boost strawberry flavor</td>
+                <td>1.99</td>
+                <td>15</td>
+                <td>
+                    <a href="/product/51">Show</a>
+                    <a href="/product/51/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>52</td>
+                <td>507</td>
+                <td>Coca-Cola Zero Soft Drink</td>
+                <td>2.57</td>
+                <td>98</td>
+                <td>
+                    <a href="/product/52">Show</a>
+                    <a href="/product/52/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>53</td>
+                <td>508</td>
+                <td>Oolong tea without sugar Tea+</td>
+                <td>2.1</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/53">Show</a>
+                    <a href="/product/53/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>54</td>
+                <td>509</td>
+                <td>Twister Orange Juice</td>
+                <td>10.58</td>
+                <td>35</td>
+                <td>
+                    <a href="/product/54">Show</a>
+                    <a href="/product/54/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>55</td>
+                <td>510</td>
+                <td>Soft drink 7UP cans</td>
+                <td>9.19</td>
+                <td>20</td>
+                <td>
+                    <a href="/product/55">Show</a>
+                    <a href="/product/55/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>56</td>
+                <td>511</td>
+                <td>Vfresh Vinamilk orange juice</td>
+                <td>2.88</td>
+                <td>54</td>
+                <td>
+                    <a href="/product/56">Show</a>
+                    <a href="/product/56/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>57</td>
+                <td>512</td>
+                <td>Vfresh Vinamilk grape juice</td>
+                <td>3.18</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/57">Show</a>
+                    <a href="/product/57/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>58</td>
+                <td>513</td>
+                <td>Redbull </td>
+                <td>10.92</td>
+                <td>65</td>
+                <td>
+                    <a href="/product/58">Show</a>
+                    <a href="/product/58/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>59</td>
+                <td>514</td>
+                <td>Sting</td>
+                <td>9.11</td>
+                <td>45</td>
+                <td>
+                    <a href="/product/59">Show</a>
+                    <a href="/product/59/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>60</td>
+                <td>515</td>
+                <td>C2 green tea lemon flavor</td>
+                <td>8.31</td>
+                <td>52</td>
+                <td>
+                    <a href="/product/60">Show</a>
+                    <a href="/product/60/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>61</td>
+                <td>516</td>
+                <td>Ice juice citrus flavor</td>
+                <td>8.06</td>
+                <td>25</td>
+                <td>
+                    <a href="/product/61">Show</a>
+                    <a href="/product/61/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>62</td>
+                <td>517</td>
+                <td>Ice juice green grape flavor</td>
+                <td>8.06</td>
+                <td>47</td>
+                <td>
+                    <a href="/product/62">Show</a>
+                    <a href="/product/62/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>63</td>
+                <td>518</td>
+                <td>Genki Traditional Flavored Milk Tea</td>
+                <td>1.66</td>
+                <td>53</td>
+                <td>
+                    <a href="/product/63">Show</a>
+                    <a href="/product/63/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>64</td>
+                <td>519</td>
+                <td>Genki jasmine milk tea</td>
+                <td>1.66</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/64">Show</a>
+                    <a href="/product/64/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>65</td>
+                <td>520</td>
+                <td>Revive</td>
+                <td>11.04</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/65">Show</a>
+                    <a href="/product/65/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>66</td>
+                <td>601</td>
+                <td>Nestle Strawberry Flavored Milk</td>
+                <td>1.1</td>
+                <td>15</td>
+                <td>
+                    <a href="/product/66">Show</a>
+                    <a href="/product/66/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>67</td>
+                <td>602</td>
+                <td>Lothamilk fresh milk</td>
+                <td>0.96</td>
+                <td>98</td>
+                <td>
+                    <a href="/product/67">Show</a>
+                    <a href="/product/67/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>68</td>
+                <td>603</td>
+                <td>Vanilla flavored Mixxi milkshake</td>
+                <td>1.86</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/68">Show</a>
+                    <a href="/product/68/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>69</td>
+                <td>604</td>
+                <td>YoMost pomegranate yogurt</td>
+                <td>1.2</td>
+                <td>35</td>
+                <td>
+                    <a href="/product/69">Show</a>
+                    <a href="/product/69/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>70</td>
+                <td>605</td>
+                <td>LoveYoghurt</td>
+                <td>1.33</td>
+                <td>20</td>
+                <td>
+                    <a href="/product/70">Show</a>
+                    <a href="/product/70/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>71</td>
+                <td>606</td>
+                <td>9 types of seeds Vinamilk Super Nut</td>
+                <td>1.72</td>
+                <td>54</td>
+                <td>
+                    <a href="/product/71">Show</a>
+                    <a href="/product/71/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>72</td>
+                <td>607</td>
+                <td>Low-fat Meadow Fresh</td>
+                <td>1.9</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/72">Show</a>
+                    <a href="/product/72/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>73</td>
+                <td>608</td>
+                <td>Yomost orange flavor</td>
+                <td>1.13</td>
+                <td>65</td>
+                <td>
+                    <a href="/product/73">Show</a>
+                    <a href="/product/73/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>74</td>
+                <td>609</td>
+                <td>Low-sugar Vinamilk yogurt</td>
+                <td>1.07</td>
+                <td>45</td>
+                <td>
+                    <a href="/product/74">Show</a>
+                    <a href="/product/74/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>75</td>
+                <td>610</td>
+                <td>Promess Vitamin</td>
+                <td>1.67</td>
+                <td>52</td>
+                <td>
+                    <a href="/product/75">Show</a>
+                    <a href="/product/75/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>76</td>
+                <td>611</td>
+                <td>Vinamilk fresh milk without sugar</td>
+                <td>1.35</td>
+                <td>25</td>
+                <td>
+                    <a href="/product/76">Show</a>
+                    <a href="/product/76/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>77</td>
+                <td>612</td>
+                <td>Vinamilk fresh milk with sugar</td>
+                <td>1.35</td>
+                <td>47</td>
+                <td>
+                    <a href="/product/77">Show</a>
+                    <a href="/product/77/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>78</td>
+                <td>613</td>
+                <td>Walnuts Vinamilk</td>
+                <td>1.18</td>
+                <td>53</td>
+                <td>
+                    <a href="/product/78">Show</a>
+                    <a href="/product/78/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>79</td>
+                <td>614</td>
+                <td>Vinamilk red bean soy milk</td>
+                <td>1.18</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/79">Show</a>
+                    <a href="/product/79/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>80</td>
+                <td>615</td>
+                <td>Vinamilk SCU Probi</td>
+                <td>1.2</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/80">Show</a>
+                    <a href="/product/80/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>81</td>
+                <td>616</td>
+                <td>Secretz soy milk with black sesame Soy</td>
+                <td>1.5</td>
+                <td>15</td>
+                <td>
+                    <a href="/product/81">Show</a>
+                    <a href="/product/81/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>82</td>
+                <td>617</td>
+                <td>Sugar-free Dutch Girl Milk</td>
+                <td>1.5</td>
+                <td>98</td>
+                <td>
+                    <a href="/product/82">Show</a>
+                    <a href="/product/82/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>83</td>
+                <td>618</td>
+                <td>Dalat Milk without sugar</td>
+                <td>2.1</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/83">Show</a>
+                    <a href="/product/83/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>84</td>
+                <td>619</td>
+                <td>Topkid drinking yogurt</td>
+                <td>1.2</td>
+                <td>35</td>
+                <td>
+                    <a href="/product/84">Show</a>
+                    <a href="/product/84/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>85</td>
+                <td>620</td>
+                <td>Mixxo Gold</td>
+                <td>2.8</td>
+                <td>20</td>
+                <td>
+                    <a href="/product/85">Show</a>
+                    <a href="/product/85/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>86</td>
+                <td>621</td>
+                <td>Strawberry flavor bentagen drink</td>
+                <td>1.12</td>
+                <td>54</td>
+                <td>
+                    <a href="/product/86">Show</a>
+                    <a href="/product/86/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>87</td>
+                <td>622</td>
+                <td>Yogurt drink Bentagen orange flavor</td>
+                <td>1.12</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/87">Show</a>
+                    <a href="/product/87/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>88</td>
+                <td>623</td>
+                <td>Star Vinamilk Yogurt</td>
+                <td>1.2</td>
+                <td>65</td>
+                <td>
+                    <a href="/product/88">Show</a>
+                    <a href="/product/88/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>89</td>
+                <td>624</td>
+                <td>Dalat Milk yogurt without sugar</td>
+                <td>1.79</td>
+                <td>45</td>
+                <td>
+                    <a href="/product/89">Show</a>
+                    <a href="/product/89/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>90</td>
+                <td>625</td>
+                <td>Yakult</td>
+                <td>1.5</td>
+                <td>52</td>
+                <td>
+                    <a href="/product/90">Show</a>
+                    <a href="/product/90/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>91</td>
+                <td>701</td>
+                <td>Noodles Jin JjaJang</td>
+                <td>2.1</td>
+                <td>25</td>
+                <td>
+                    <a href="/product/91">Show</a>
+                    <a href="/product/91/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>92</td>
+                <td>702</td>
+                <td>Paldo Black Sauce Mixed Noodles</td>
+                <td>0.5</td>
+                <td>47</td>
+                <td>
+                    <a href="/product/92">Show</a>
+                    <a href="/product/92/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>93</td>
+                <td>703</td>
+                <td>Carbonara Samyang Noodles</td>
+                <td>1.25</td>
+                <td>53</td>
+                <td>
+                    <a href="/product/93">Show</a>
+                    <a href="/product/93/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>94</td>
+                <td>704</td>
+                <td>Ottogi Jin Noodles with Black Sauce Beef Flavor</td>
+                <td>0.56</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/94">Show</a>
+                    <a href="/product/94/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>95</td>
+                <td>705</td>
+                <td>Koreno Jumbo Noodles with Kimchi Flavor</td>
+                <td>3.58</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/95">Show</a>
+                    <a href="/product/95/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>96</td>
+                <td>706</td>
+                <td>Koreno Noodles with Shrimp Flavor</td>
+                <td>3.58</td>
+                <td>15</td>
+                <td>
+                    <a href="/product/96">Show</a>
+                    <a href="/product/96/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>97</td>
+                <td>707</td>
+                <td>Paldo Spicy Beef Noodles</td>
+                <td>3.58</td>
+                <td>98</td>
+                <td>
+                    <a href="/product/97">Show</a>
+                    <a href="/product/97/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>98</td>
+                <td>708</td>
+                <td>Chicken Koreno Noodles</td>
+                <td>3.58</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/98">Show</a>
+                    <a href="/product/98/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>99</td>
+                <td>709</td>
+                <td>Palace Noodles with crab flavor</td>
+                <td>0.35</td>
+                <td>35</td>
+                <td>
+                    <a href="/product/99">Show</a>
+                    <a href="/product/99/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>100</td>
+                <td>710</td>
+                <td>Hao Hao Noodles with Acecook shrimp flavor</td>
+                <td>0.18</td>
+                <td>20</td>
+                <td>
+                    <a href="/product/100">Show</a>
+                    <a href="/product/100/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>101</td>
+                <td>711</td>
+                <td>Modern Shrimp Thai Hot Pot Noodles</td>
+                <td>0.36</td>
+                <td>54</td>
+                <td>
+                    <a href="/product/101">Show</a>
+                    <a href="/product/101/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>102</td>
+                <td>712</td>
+                <td>Acecook Japanese Udon Noodles</td>
+                <td>0.42</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/102">Show</a>
+                    <a href="/product/102/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>103</td>
+                <td>713</td>
+                <td>Omachi rib noodles</td>
+                <td>10.6</td>
+                <td>65</td>
+                <td>
+                    <a href="/product/103">Show</a>
+                    <a href="/product/103/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>104</td>
+                <td>714</td>
+                <td>Kokomi noodles</td>
+                <td>4.69</td>
+                <td>45</td>
+                <td>
+                    <a href="/product/104">Show</a>
+                    <a href="/product/104/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>105</td>
+                <td>715</td>
+                <td>Omachi Shrimp Noodles</td>
+                <td>10.6</td>
+                <td>52</td>
+                <td>
+                    <a href="/product/105">Show</a>
+                    <a href="/product/105/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>106</td>
+                <td>716</td>
+                <td>Bongoyang Noodles​​ Hanil Food</td>
+                <td>0.73</td>
+                <td>25</td>
+                <td>
+                    <a href="/product/106">Show</a>
+                    <a href="/product/106/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>107</td>
+                <td>717</td>
+                <td>Shin Ramyun Nongshim Instant Noodles</td>
+                <td>1.05</td>
+                <td>47</td>
+                <td>
+                    <a href="/product/107">Show</a>
+                    <a href="/product/107/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>108</td>
+                <td>718</td>
+                <td>ShinNongShim Cup Noodles</td>
+                <td>1.13</td>
+                <td>53</td>
+                <td>
+                    <a href="/product/108">Show</a>
+                    <a href="/product/108/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>109</td>
+                <td>719</td>
+                <td>Vifon beef Pho</td>
+                <td>10.58</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/109">Show</a>
+                    <a href="/product/109/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>110</td>
+                <td>720</td>
+                <td>Vifon chicken Pho</td>
+                <td>10.58</td>
+                <td>74</td>
+                <td>
+                    <a href="/product/110">Show</a>
+                    <a href="/product/110/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>111</td>
+                <td>721</td>
+                <td>CHIN-SU Beef Pho</td>
+                <td>1.41</td>
+                <td>15</td>
+                <td>
+                    <a href="/product/111">Show</a>
+                    <a href="/product/111/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>112</td>
+                <td>722</td>
+                <td>Acecook Beef Pho</td>
+                <td>0.35</td>
+                <td>98</td>
+                <td>
+                    <a href="/product/112">Show</a>
+                    <a href="/product/112/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>113</td>
+                <td>723</td>
+                <td>Acecook Chicken Pho</td>
+                <td>0.35</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/113">Show</a>
+                    <a href="/product/113/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>114</td>
+                <td>724</td>
+                <td>Acecook Seafood Siukay Noodles</td>
+                <td>0.55</td>
+                <td>35</td>
+                <td>
+                    <a href="/product/114">Show</a>
+                    <a href="/product/114/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>115</td>
+                <td>725</td>
+                <td>Thai Reeva Spicy Noodles</td>
+                <td>0.2</td>
+                <td>20</td>
+                <td>
+                    <a href="/product/115">Show</a>
+                    <a href="/product/115/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>116</td>
+                <td>726</td>
+                <td>Hao Hao Acecook Noodles with satay flavor</td>
+                <td>0.2</td>
+                <td>54</td>
+                <td>
+                    <a href="/product/116">Show</a>
+                    <a href="/product/116/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>117</td>
+                <td>727</td>
+                <td>Kokomi noodles spicy</td>
+                <td>0.31</td>
+                <td>41</td>
+                <td>
+                    <a href="/product/117">Show</a>
+                    <a href="/product/117/edit">Edit</a>
+                </td>
+            </tr>
+                </tbody>
     </table>
-
-    <a href="{{ path('app_product_new') }}">Create new</a>
-{% endblock %}
+</body>
+</html>

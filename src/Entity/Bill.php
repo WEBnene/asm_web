@@ -20,6 +20,18 @@ class Bill
     private $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity=Customer::class)
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $Customer;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Staff::class)
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $Staff;
+
+    /**
      * @ORM\Column(type="float")
      */
     private $Discount;
@@ -34,18 +46,6 @@ class Bill
      */
     private $Product;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Customer::class)
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $Customer;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=Staff::class)
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $Staff;
-
     public function __construct()
     {
         $this->Product = new ArrayCollection();
@@ -54,6 +54,30 @@ class Bill
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getCustomer(): ?Customer
+    {
+        return $this->Customer;
+    }
+
+    public function setCustomer(?Customer $Customer): self
+    {
+        $this->Customer = $Customer;
+
+        return $this;
+    }
+
+    public function getStaff(): ?Staff
+    {
+        return $this->Staff;
+    }
+
+    public function setStaff(?Staff $Staff): self
+    {
+        $this->Staff = $Staff;
+
+        return $this;
     }
 
     public function getDiscount(): ?float
@@ -100,30 +124,6 @@ class Bill
     public function removeProduct(Product $product): self
     {
         $this->Product->removeElement($product);
-
-        return $this;
-    }
-
-    public function getCustomer(): ?Customer
-    {
-        return $this->Customer;
-    }
-
-    public function setCustomer(?Customer $Customer): self
-    {
-        $this->Customer = $Customer;
-
-        return $this;
-    }
-
-    public function getStaff(): ?Staff
-    {
-        return $this->Staff;
-    }
-
-    public function setStaff(?Staff $Staff): self
-    {
-        $this->Staff = $Staff;
 
         return $this;
     }

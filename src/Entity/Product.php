@@ -20,16 +20,13 @@ class Product
     /**
      * @ORM\Column(type="bigint")
      */
-
     private $Seri;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $Name;
-    public function __toString() {
-        return $this->Name;
-    }
+
     /**
      * @ORM\ManyToOne(targetEntity=Category::class)
      * @ORM\JoinColumn(nullable=false)
@@ -45,6 +42,11 @@ class Product
      * @ORM\Column(type="integer")
      */
     private $Quantity;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Image;
 
     public function getId(): ?int
     {
@@ -107,6 +109,18 @@ class Product
     public function setQuantity(int $Quantity): self
     {
         $this->Quantity = $Quantity;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->Image;
+    }
+
+    public function setImage(string $Image): self
+    {
+        $this->Image = $Image;
 
         return $this;
     }
