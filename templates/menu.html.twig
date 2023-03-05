@@ -16,19 +16,22 @@
     font-family: Tahoma Geneva;
     font-size: 150%;
     font-weight:bold;
-    color:#0000FF;
-    padding: 0 5px;
+    color:#0d6efd;
+    padding: 0 15px;
     border-right:1px solid #00FF333;
     text-transform:uppercase;
     text-decoration:none;
+    text-align: center;
+    margin: 25px 50px;
     }
     body {
-    background-color: #E0FFFF;
+    background-color: #F0FFFF;
     }
     a{ 
         color: #0000FF;
     }
     p {
+      text-align: center;
         color: #ffffff;
     }
     .nav-item{
@@ -48,7 +51,7 @@
             <div class="container ">
                 <div class="row">
                     <div class="col-md-2 py-2">
-                        <img src="{{ asset('images/logo.png') }}" class="img-fluid" style="width:120px;height:72px; alt="Logo">
+                        <img src="{{ asset('image/logo.png') }}" class="img-fluid" style="width:120px;height:72px; alt="Logo">
                     </div>
                     <div class="col-md-7 py-4">
                        <div>
@@ -88,11 +91,33 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js" ></script>
 <script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap5.min.js" ></script>
+
     <script>
     $(document).ready(function() {
       $('#bill').DataTable();
     });
     </script>
+    <script>
+    $(document).ready(function() {
+      $('#customer').DataTable();
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+      $('#staff').DataTable();
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+      $('#category').DataTable();
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+      $('#product').DataTable();
+    });
+    </script>
+    
     </body>
   </html>
 {% endblock%}
