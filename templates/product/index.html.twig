@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 //thay đổi
     <header>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
@@ -33,6 +34,70 @@
     });
     </script>
     </body>
+=======
+<header>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css">
+</head>
+</header>
+<body> 
+      <section class="myheader bg-light" >
+            <div class="container ">
+                <div class="row">
+                    <div class="col-md-2 py-2">
+                        <img src="{{ asset('images/logo.png') }}" class="img-fluid" style="width:120px;height:72px; alt="Logo">
+                    </div>
+                    <div class="col-md-7 py-4">
+                       <div>
+                          <ul class="nav justify-content-center">
+                          <li class="nav-item">
+                              <a class="nav-link" href="{{ path('app_home') }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="{{ path('app_customer_index') }}">Customers</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="{{ path('app_staff_index') }}">Staffs</a
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="{{ path('app_category_index') }}">Category</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="{{ path('app_bill_index') }}">Bill</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="{{ path('app_product_index') }}">Product</a>
+                            </li>
+                          </ul> 
+                      </div>
+                    </div>
+                    <div class="col-md-3 py-4">
+                      <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search product" aria-label="Search product">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                      </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js" ></script>
+<script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap5.min.js" ></script>
+    <script>
+    $(document).ready(function() {
+      $('#product').DataTable( {    
+        data: data,    columns: [        
+            { data: 'id' },        
+            { data: 'seri' },        
+            { data: 'name' },        
+            { data: 'price' },
+            { data: 'quantity' },
+            { data: ' ' },
+            { data: ' ' }    ]} );
+    });
+    </script>
+>>>>>>> Stashed changes
 <!DOCTYPE html>
 <html>
     <head>
@@ -50,11 +115,19 @@
     background-color: #85DDD1;
     }
     </style>
+<<<<<<< Updated upstream
     <body>
             <h1>Product list</h1>
             
     <a href="/product/new">Create new</a> 
 
+=======
+
+{% block body %}
+            <h1>Product list</h1>
+
+    <a href="/product/new">Create new</a>
+>>>>>>> Stashed changes
     <table id="product" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
@@ -63,15 +136,22 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Quantity</th>
+                <th>Image</th>
                 <th>Actions</th>
+                
             </tr>
         </thead>
         <tbody>
+<<<<<<< Updated upstream
             <tr>
+=======
+                    <tr>
+>>>>>>> Stashed changes
                 <td>1</td>
                 <td>101</td>
                 <td>Ginger candy</td>
                 <td>2</td>
+<<<<<<< Updated upstream
                 <td>25</td>
                 <td>
                     <a href="/product/1">Show</a>
@@ -101,11 +181,48 @@
                 </td>
             </tr>
                     <tr>
+=======
+                <td>454345456</td>
+                <td><img src="{{ asset('images/1.jpg') }}" class="img-fluid" style="width:150px;height:150px; alt="1"></td>
+                <td>
+                    <a href="/product/1">Show</a>
+                    <a href="/product/1/edit">Edit</a>
+                </td>
+                
+            </tr>
+                    <tr>
+                <td>2</td>
+                <td>102</td>
+                <td>Bibica Zoo Jelly candy</td>
+                <td>2.1</td>
+                <td>3243</td>
+                <td>
+                    <a href="/product/2">Show</a>
+                    <a href="/product/2/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+                <td>3</td>
+                <td>103</td>
+                <td>Socola Chocorock candy</td>
+                <td>3.8</td>
+                <td>5654</td>
+                <td>
+                    <a href="/product/3">Show</a>
+                    <a href="/product/3/edit">Edit</a>
+                </td>
+            </tr>
+                    <tr>
+>>>>>>> Stashed changes
                 <td>4</td>
                 <td>104</td>
                 <td>Socola Ritter Sport candy</td>
                 <td>2.26</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>34645</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/4">Show</a>
                     <a href="/product/4/edit">Edit</a>
@@ -116,7 +233,11 @@
                 <td>105</td>
                 <td>McGoods Peanut candy</td>
                 <td>2.3</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>34645</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/5">Show</a>
                     <a href="/product/5/edit">Edit</a>
@@ -127,7 +248,11 @@
                 <td>106</td>
                 <td>Pororo Magic Ring candy</td>
                 <td>1.9</td>
+<<<<<<< Updated upstream
                 <td>15</td>
+=======
+                <td>5646</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/6">Show</a>
                     <a href="/product/6/edit">Edit</a>
@@ -138,7 +263,11 @@
                 <td>107</td>
                 <td>Mentos Yogurt Flavored Chewing candy</td>
                 <td>2.5</td>
+<<<<<<< Updated upstream
                 <td>98</td>
+=======
+                <td>4363</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/7">Show</a>
                     <a href="/product/7/edit">Edit</a>
@@ -149,7 +278,11 @@
                 <td>108</td>
                 <td>Mentos Fruit Rainbow Chewables candy</td>
                 <td>2.1</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>3455</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/8">Show</a>
                     <a href="/product/8/edit">Edit</a>
@@ -160,7 +293,11 @@
                 <td>109</td>
                 <td>Caramen Alpenliebe candy</td>
                 <td>2</td>
+<<<<<<< Updated upstream
                 <td>35</td>
+=======
+                <td>235</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/9">Show</a>
                     <a href="/product/9/edit">Edit</a>
@@ -171,7 +308,11 @@
                 <td>110</td>
                 <td>Nestlé KitKat</td>
                 <td>3.25</td>
+<<<<<<< Updated upstream
                 <td>20</td>
+=======
+                <td>4456</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/10">Show</a>
                     <a href="/product/10/edit">Edit</a>
@@ -182,7 +323,11 @@
                 <td>111</td>
                 <td>Meiji Milk Chocolate candy</td>
                 <td>5.17</td>
+<<<<<<< Updated upstream
                 <td>54</td>
+=======
+                <td>3453</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/11">Show</a>
                     <a href="/product/11/edit">Edit</a>
@@ -193,7 +338,11 @@
                 <td>112</td>
                 <td>M&amp;M Peanut Chocolate candy</td>
                 <td>2.25</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>4532</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/12">Show</a>
                     <a href="/product/12/edit">Edit</a>
@@ -204,7 +353,11 @@
                 <td>113</td>
                 <td>Ritter Sport Hazelnut Milk Chocolate</td>
                 <td>2.75</td>
+<<<<<<< Updated upstream
                 <td>65</td>
+=======
+                <td>5435</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/13">Show</a>
                     <a href="/product/13/edit">Edit</a>
@@ -215,7 +368,11 @@
                 <td>114</td>
                 <td>Sunflower chocolate candy</td>
                 <td>4.29</td>
+<<<<<<< Updated upstream
                 <td>45</td>
+=======
+                <td>654</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/14">Show</a>
                     <a href="/product/14/edit">Edit</a>
@@ -226,7 +383,11 @@
                 <td>115</td>
                 <td>Mixed Alpenliebe candy</td>
                 <td>4.2</td>
+<<<<<<< Updated upstream
                 <td>52</td>
+=======
+                <td>5732</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/15">Show</a>
                     <a href="/product/15/edit">Edit</a>
@@ -237,7 +398,11 @@
                 <td>201</td>
                 <td>Snack Lay BBQ</td>
                 <td>0.5</td>
+<<<<<<< Updated upstream
                 <td>25</td>
+=======
+                <td>45</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/16">Show</a>
                     <a href="/product/16/edit">Edit</a>
@@ -248,7 +413,11 @@
                 <td>202</td>
                 <td>MCGoods seaweed snack</td>
                 <td>1.33</td>
+<<<<<<< Updated upstream
                 <td>47</td>
+=======
+                <td>54634</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/17">Show</a>
                     <a href="/product/17/edit">Edit</a>
@@ -259,7 +428,11 @@
                 <td>203</td>
                 <td>Shrimp Snack Hanami</td>
                 <td>2.1</td>
+<<<<<<< Updated upstream
                 <td>53</td>
+=======
+                <td>73456</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/18">Show</a>
                     <a href="/product/18/edit">Edit</a>
@@ -270,7 +443,11 @@
                 <td>204</td>
                 <td>Cheese popcorn</td>
                 <td>2.5</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>355</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/19">Show</a>
                     <a href="/product/19/edit">Edit</a>
@@ -281,7 +458,11 @@
                 <td>205</td>
                 <td>Squid Snack Bento</td>
                 <td>1.5</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>35</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/20">Show</a>
                     <a href="/product/20/edit">Edit</a>
@@ -292,7 +473,11 @@
                 <td>206</td>
                 <td>Taokaenoi Spicy Snack</td>
                 <td>1.8</td>
+<<<<<<< Updated upstream
                 <td>15</td>
+=======
+                <td>6786</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/21">Show</a>
                     <a href="/product/21/edit">Edit</a>
@@ -303,7 +488,11 @@
                 <td>207</td>
                 <td>Snack Karamucho</td>
                 <td>1.25</td>
+<<<<<<< Updated upstream
                 <td>98</td>
+=======
+                <td>3567</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/22">Show</a>
                     <a href="/product/22/edit">Edit</a>
@@ -314,7 +503,11 @@
                 <td>208</td>
                 <td>Ostar Potato Snack</td>
                 <td>1.25</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>54447</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/23">Show</a>
                     <a href="/product/23/edit">Edit</a>
@@ -325,7 +518,11 @@
                 <td>209</td>
                 <td>Garlic bread snack</td>
                 <td>2.2</td>
+<<<<<<< Updated upstream
                 <td>35</td>
+=======
+                <td>5346</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/24">Show</a>
                     <a href="/product/24/edit">Edit</a>
@@ -336,7 +533,11 @@
                 <td>210</td>
                 <td>Honey Poppedcorn Popcorn</td>
                 <td>2.5</td>
+<<<<<<< Updated upstream
                 <td>20</td>
+=======
+                <td>567</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/25">Show</a>
                     <a href="/product/25/edit">Edit</a>
@@ -347,7 +548,11 @@
                 <td>301</td>
                 <td>Café Vinacafé 3in1 Gold Original</td>
                 <td>1.85</td>
+<<<<<<< Updated upstream
                 <td>54</td>
+=======
+                <td>4624</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/26">Show</a>
                     <a href="/product/26/edit">Edit</a>
@@ -358,7 +563,11 @@
                 <td>302</td>
                 <td>Creative Coffee</td>
                 <td>4.77</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>5763</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/27">Show</a>
                     <a href="/product/27/edit">Edit</a>
@@ -369,7 +578,11 @@
                 <td>303</td>
                 <td>Instant coffee 3in1 G7</td>
                 <td>2.13</td>
+<<<<<<< Updated upstream
                 <td>65</td>
+=======
+                <td>4526</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/28">Show</a>
                     <a href="/product/28/edit">Edit</a>
@@ -380,7 +593,11 @@
                 <td>304</td>
                 <td>Coffee Nescafe with almond milk</td>
                 <td>2.43</td>
+<<<<<<< Updated upstream
                 <td>45</td>
+=======
+                <td>54345</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/29">Show</a>
                     <a href="/product/29/edit">Edit</a>
@@ -391,7 +608,11 @@
                 <td>305</td>
                 <td>Coffee Nescafe hazelnut milk</td>
                 <td>2.47</td>
+<<<<<<< Updated upstream
                 <td>52</td>
+=======
+                <td>65467</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/30">Show</a>
                     <a href="/product/30/edit">Edit</a>
@@ -402,7 +623,11 @@
                 <td>306</td>
                 <td>NesCafé Latte Chocolate Instant Milk Coffee</td>
                 <td>2.43</td>
+<<<<<<< Updated upstream
                 <td>25</td>
+=======
+                <td>134</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/31">Show</a>
                     <a href="/product/31/edit">Edit</a>
@@ -413,7 +638,11 @@
                 <td>307</td>
                 <td>Nescafe iced milk coffee</td>
                 <td>4.66</td>
+<<<<<<< Updated upstream
                 <td>47</td>
+=======
+                <td>432</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/32">Show</a>
                     <a href="/product/32/edit">Edit</a>
@@ -424,7 +653,11 @@
                 <td>308</td>
                 <td>NESCAFE Instant Coffee Red Cup</td>
                 <td>6.68</td>
+<<<<<<< Updated upstream
                 <td>53</td>
+=======
+                <td>4624</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/33">Show</a>
                     <a href="/product/33/edit">Edit</a>
@@ -435,7 +668,11 @@
                 <td>309</td>
                 <td>Cappuccino mocha G7</td>
                 <td>2.74</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>5763</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/34">Show</a>
                     <a href="/product/34/edit">Edit</a>
@@ -446,7 +683,11 @@
                 <td>310</td>
                 <td>Passiona Coffee G7</td>
                 <td>2.44</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>4526</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/35">Show</a>
                     <a href="/product/35/edit">Edit</a>
@@ -457,7 +698,11 @@
                 <td>311</td>
                 <td>Nestle Gold Blend Coffee</td>
                 <td>5.92</td>
+<<<<<<< Updated upstream
                 <td>15</td>
+=======
+                <td>54345</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/36">Show</a>
                     <a href="/product/36/edit">Edit</a>
@@ -468,7 +713,11 @@
                 <td>312</td>
                 <td>Instant Coffee Capuccino 4in1 Mr.Viet</td>
                 <td>4.62</td>
+<<<<<<< Updated upstream
                 <td>98</td>
+=======
+                <td>65467</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/37">Show</a>
                     <a href="/product/37/edit">Edit</a>
@@ -479,7 +728,11 @@
                 <td>401</td>
                 <td>Lavie natural mineral water</td>
                 <td>4.7</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>134</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/38">Show</a>
                     <a href="/product/38/edit">Edit</a>
@@ -490,7 +743,11 @@
                 <td>402</td>
                 <td>Dasani bottled water</td>
                 <td>4.65</td>
+<<<<<<< Updated upstream
                 <td>35</td>
+=======
+                <td>432</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/39">Show</a>
                     <a href="/product/39/edit">Edit</a>
@@ -501,7 +758,11 @@
                 <td>403</td>
                 <td>Aquafina drinking water</td>
                 <td>4.83</td>
+<<<<<<< Updated upstream
                 <td>20</td>
+=======
+                <td>4624</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/40">Show</a>
                     <a href="/product/40/edit">Edit</a>
@@ -512,7 +773,11 @@
                 <td>404</td>
                 <td>Aquafina natural mineral water</td>
                 <td>5.33</td>
+<<<<<<< Updated upstream
                 <td>54</td>
+=======
+                <td>5763</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/41">Show</a>
                     <a href="/product/41/edit">Edit</a>
@@ -523,7 +788,11 @@
                 <td>405</td>
                 <td>Dasani pure drinking water</td>
                 <td>4.45</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>4526</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/42">Show</a>
                     <a href="/product/42/edit">Edit</a>
@@ -534,7 +803,11 @@
                 <td>406</td>
                 <td>Dasani mineral water</td>
                 <td>4.87</td>
+<<<<<<< Updated upstream
                 <td>65</td>
+=======
+                <td>457</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/43">Show</a>
                     <a href="/product/43/edit">Edit</a>
@@ -545,7 +818,11 @@
                 <td>407</td>
                 <td>Vivant natural mineral water</td>
                 <td>4.58</td>
+<<<<<<< Updated upstream
                 <td>45</td>
+=======
+                <td>4645</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/44">Show</a>
                     <a href="/product/44/edit">Edit</a>
@@ -556,7 +833,11 @@
                 <td>408</td>
                 <td>Perrier mineral water</td>
                 <td>1.5</td>
+<<<<<<< Updated upstream
                 <td>52</td>
+=======
+                <td>4624</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/45">Show</a>
                     <a href="/product/45/edit">Edit</a>
@@ -567,7 +848,11 @@
                 <td>501</td>
                 <td>Warrior soft drink grape flavor</td>
                 <td>1.2</td>
+<<<<<<< Updated upstream
                 <td>25</td>
+=======
+                <td>5763</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/46">Show</a>
                     <a href="/product/46/edit">Edit</a>
@@ -578,7 +863,11 @@
                 <td>502</td>
                 <td>Warrior soft drink strawberry flavor</td>
                 <td>1.2</td>
+<<<<<<< Updated upstream
                 <td>47</td>
+=======
+                <td>4526</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/47">Show</a>
                     <a href="/product/47/edit">Edit</a>
@@ -589,7 +878,11 @@
                 <td>503</td>
                 <td>Aquarius vitamin supplement drink</td>
                 <td>2.62</td>
+<<<<<<< Updated upstream
                 <td>53</td>
+=======
+                <td>54345</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/48">Show</a>
                     <a href="/product/48/edit">Edit</a>
@@ -600,7 +893,11 @@
                 <td>504</td>
                 <td>Coconut water CoCoXim</td>
                 <td>1.3</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>65467</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/49">Show</a>
                     <a href="/product/49/edit">Edit</a>
@@ -611,7 +908,11 @@
                 <td>505</td>
                 <td>Nutri Boost orange flavor</td>
                 <td>1.99</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>134</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/50">Show</a>
                     <a href="/product/50/edit">Edit</a>
@@ -622,7 +923,11 @@
                 <td>506</td>
                 <td>Nutri Boost strawberry flavor</td>
                 <td>1.99</td>
+<<<<<<< Updated upstream
                 <td>15</td>
+=======
+                <td>432</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/51">Show</a>
                     <a href="/product/51/edit">Edit</a>
@@ -633,7 +938,11 @@
                 <td>507</td>
                 <td>Coca-Cola Zero Soft Drink</td>
                 <td>2.57</td>
+<<<<<<< Updated upstream
                 <td>98</td>
+=======
+                <td>4624</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/52">Show</a>
                     <a href="/product/52/edit">Edit</a>
@@ -644,7 +953,11 @@
                 <td>508</td>
                 <td>Oolong tea without sugar Tea+</td>
                 <td>2.1</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>5763</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/53">Show</a>
                     <a href="/product/53/edit">Edit</a>
@@ -655,7 +968,11 @@
                 <td>509</td>
                 <td>Twister Orange Juice</td>
                 <td>10.58</td>
+<<<<<<< Updated upstream
                 <td>35</td>
+=======
+                <td>4526</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/54">Show</a>
                     <a href="/product/54/edit">Edit</a>
@@ -666,7 +983,11 @@
                 <td>510</td>
                 <td>Soft drink 7UP cans</td>
                 <td>9.19</td>
+<<<<<<< Updated upstream
                 <td>20</td>
+=======
+                <td>54345</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/55">Show</a>
                     <a href="/product/55/edit">Edit</a>
@@ -677,7 +998,11 @@
                 <td>511</td>
                 <td>Vfresh Vinamilk orange juice</td>
                 <td>2.88</td>
+<<<<<<< Updated upstream
                 <td>54</td>
+=======
+                <td>65467</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/56">Show</a>
                     <a href="/product/56/edit">Edit</a>
@@ -688,7 +1013,11 @@
                 <td>512</td>
                 <td>Vfresh Vinamilk grape juice</td>
                 <td>3.18</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>134</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/57">Show</a>
                     <a href="/product/57/edit">Edit</a>
@@ -699,7 +1028,11 @@
                 <td>513</td>
                 <td>Redbull </td>
                 <td>10.92</td>
+<<<<<<< Updated upstream
                 <td>65</td>
+=======
+                <td>432</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/58">Show</a>
                     <a href="/product/58/edit">Edit</a>
@@ -710,7 +1043,11 @@
                 <td>514</td>
                 <td>Sting</td>
                 <td>9.11</td>
+<<<<<<< Updated upstream
                 <td>45</td>
+=======
+                <td>4624</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/59">Show</a>
                     <a href="/product/59/edit">Edit</a>
@@ -721,7 +1058,11 @@
                 <td>515</td>
                 <td>C2 green tea lemon flavor</td>
                 <td>8.31</td>
+<<<<<<< Updated upstream
                 <td>52</td>
+=======
+                <td>5763</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/60">Show</a>
                     <a href="/product/60/edit">Edit</a>
@@ -732,7 +1073,11 @@
                 <td>516</td>
                 <td>Ice juice citrus flavor</td>
                 <td>8.06</td>
+<<<<<<< Updated upstream
                 <td>25</td>
+=======
+                <td>4526</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/61">Show</a>
                     <a href="/product/61/edit">Edit</a>
@@ -743,7 +1088,11 @@
                 <td>517</td>
                 <td>Ice juice green grape flavor</td>
                 <td>8.06</td>
+<<<<<<< Updated upstream
                 <td>47</td>
+=======
+                <td>54345</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/62">Show</a>
                     <a href="/product/62/edit">Edit</a>
@@ -754,7 +1103,11 @@
                 <td>518</td>
                 <td>Genki Traditional Flavored Milk Tea</td>
                 <td>1.66</td>
+<<<<<<< Updated upstream
                 <td>53</td>
+=======
+                <td>65467</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/63">Show</a>
                     <a href="/product/63/edit">Edit</a>
@@ -765,7 +1118,11 @@
                 <td>519</td>
                 <td>Genki jasmine milk tea</td>
                 <td>1.66</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>134</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/64">Show</a>
                     <a href="/product/64/edit">Edit</a>
@@ -776,7 +1133,11 @@
                 <td>520</td>
                 <td>Revive</td>
                 <td>11.04</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>432</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/65">Show</a>
                     <a href="/product/65/edit">Edit</a>
@@ -787,7 +1148,11 @@
                 <td>601</td>
                 <td>Nestle Strawberry Flavored Milk</td>
                 <td>1.1</td>
+<<<<<<< Updated upstream
                 <td>15</td>
+=======
+                <td>4624</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/66">Show</a>
                     <a href="/product/66/edit">Edit</a>
@@ -798,7 +1163,11 @@
                 <td>602</td>
                 <td>Lothamilk fresh milk</td>
                 <td>0.96</td>
+<<<<<<< Updated upstream
                 <td>98</td>
+=======
+                <td>5763</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/67">Show</a>
                     <a href="/product/67/edit">Edit</a>
@@ -809,7 +1178,11 @@
                 <td>603</td>
                 <td>Vanilla flavored Mixxi milkshake</td>
                 <td>1.86</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>4526</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/68">Show</a>
                     <a href="/product/68/edit">Edit</a>
@@ -820,7 +1193,11 @@
                 <td>604</td>
                 <td>YoMost pomegranate yogurt</td>
                 <td>1.2</td>
+<<<<<<< Updated upstream
                 <td>35</td>
+=======
+                <td>54345</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/69">Show</a>
                     <a href="/product/69/edit">Edit</a>
@@ -831,7 +1208,11 @@
                 <td>605</td>
                 <td>LoveYoghurt</td>
                 <td>1.33</td>
+<<<<<<< Updated upstream
                 <td>20</td>
+=======
+                <td>65467</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/70">Show</a>
                     <a href="/product/70/edit">Edit</a>
@@ -842,7 +1223,11 @@
                 <td>606</td>
                 <td>9 types of seeds Vinamilk Super Nut</td>
                 <td>1.72</td>
+<<<<<<< Updated upstream
                 <td>54</td>
+=======
+                <td>134</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/71">Show</a>
                     <a href="/product/71/edit">Edit</a>
@@ -853,7 +1238,11 @@
                 <td>607</td>
                 <td>Low-fat Meadow Fresh</td>
                 <td>1.9</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>432</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/72">Show</a>
                     <a href="/product/72/edit">Edit</a>
@@ -864,7 +1253,11 @@
                 <td>608</td>
                 <td>Yomost orange flavor</td>
                 <td>1.13</td>
+<<<<<<< Updated upstream
                 <td>65</td>
+=======
+                <td>4624</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/73">Show</a>
                     <a href="/product/73/edit">Edit</a>
@@ -875,7 +1268,11 @@
                 <td>609</td>
                 <td>Low-sugar Vinamilk yogurt</td>
                 <td>1.07</td>
+<<<<<<< Updated upstream
                 <td>45</td>
+=======
+                <td>5763</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/74">Show</a>
                     <a href="/product/74/edit">Edit</a>
@@ -886,7 +1283,11 @@
                 <td>610</td>
                 <td>Promess Vitamin</td>
                 <td>1.67</td>
+<<<<<<< Updated upstream
                 <td>52</td>
+=======
+                <td>4526</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/75">Show</a>
                     <a href="/product/75/edit">Edit</a>
@@ -897,7 +1298,11 @@
                 <td>611</td>
                 <td>Vinamilk fresh milk without sugar</td>
                 <td>1.35</td>
+<<<<<<< Updated upstream
                 <td>25</td>
+=======
+                <td>54345</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/76">Show</a>
                     <a href="/product/76/edit">Edit</a>
@@ -908,7 +1313,11 @@
                 <td>612</td>
                 <td>Vinamilk fresh milk with sugar</td>
                 <td>1.35</td>
+<<<<<<< Updated upstream
                 <td>47</td>
+=======
+                <td>65467</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/77">Show</a>
                     <a href="/product/77/edit">Edit</a>
@@ -919,7 +1328,11 @@
                 <td>613</td>
                 <td>Walnuts Vinamilk</td>
                 <td>1.18</td>
+<<<<<<< Updated upstream
                 <td>53</td>
+=======
+                <td>134</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/78">Show</a>
                     <a href="/product/78/edit">Edit</a>
@@ -930,7 +1343,11 @@
                 <td>614</td>
                 <td>Vinamilk red bean soy milk</td>
                 <td>1.18</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>432</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/79">Show</a>
                     <a href="/product/79/edit">Edit</a>
@@ -941,7 +1358,11 @@
                 <td>615</td>
                 <td>Vinamilk SCU Probi</td>
                 <td>1.2</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>4624</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/80">Show</a>
                     <a href="/product/80/edit">Edit</a>
@@ -952,7 +1373,11 @@
                 <td>616</td>
                 <td>Secretz soy milk with black sesame Soy</td>
                 <td>1.5</td>
+<<<<<<< Updated upstream
                 <td>15</td>
+=======
+                <td>5763</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/81">Show</a>
                     <a href="/product/81/edit">Edit</a>
@@ -963,7 +1388,11 @@
                 <td>617</td>
                 <td>Sugar-free Dutch Girl Milk</td>
                 <td>1.5</td>
+<<<<<<< Updated upstream
                 <td>98</td>
+=======
+                <td>4526</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/82">Show</a>
                     <a href="/product/82/edit">Edit</a>
@@ -974,7 +1403,11 @@
                 <td>618</td>
                 <td>Dalat Milk without sugar</td>
                 <td>2.1</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>54345</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/83">Show</a>
                     <a href="/product/83/edit">Edit</a>
@@ -985,7 +1418,11 @@
                 <td>619</td>
                 <td>Topkid drinking yogurt</td>
                 <td>1.2</td>
+<<<<<<< Updated upstream
                 <td>35</td>
+=======
+                <td>65467</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/84">Show</a>
                     <a href="/product/84/edit">Edit</a>
@@ -996,7 +1433,11 @@
                 <td>620</td>
                 <td>Mixxo Gold</td>
                 <td>2.8</td>
+<<<<<<< Updated upstream
                 <td>20</td>
+=======
+                <td>134</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/85">Show</a>
                     <a href="/product/85/edit">Edit</a>
@@ -1007,7 +1448,11 @@
                 <td>621</td>
                 <td>Strawberry flavor bentagen drink</td>
                 <td>1.12</td>
+<<<<<<< Updated upstream
                 <td>54</td>
+=======
+                <td>432</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/86">Show</a>
                     <a href="/product/86/edit">Edit</a>
@@ -1018,7 +1463,11 @@
                 <td>622</td>
                 <td>Yogurt drink Bentagen orange flavor</td>
                 <td>1.12</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>4624</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/87">Show</a>
                     <a href="/product/87/edit">Edit</a>
@@ -1029,7 +1478,11 @@
                 <td>623</td>
                 <td>Star Vinamilk Yogurt</td>
                 <td>1.2</td>
+<<<<<<< Updated upstream
                 <td>65</td>
+=======
+                <td>5763</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/88">Show</a>
                     <a href="/product/88/edit">Edit</a>
@@ -1040,7 +1493,11 @@
                 <td>624</td>
                 <td>Dalat Milk yogurt without sugar</td>
                 <td>1.79</td>
+<<<<<<< Updated upstream
                 <td>45</td>
+=======
+                <td>4526</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/89">Show</a>
                     <a href="/product/89/edit">Edit</a>
@@ -1051,7 +1508,11 @@
                 <td>625</td>
                 <td>Yakult</td>
                 <td>1.5</td>
+<<<<<<< Updated upstream
                 <td>52</td>
+=======
+                <td>54345</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/90">Show</a>
                     <a href="/product/90/edit">Edit</a>
@@ -1062,7 +1523,11 @@
                 <td>701</td>
                 <td>Noodles Jin JjaJang</td>
                 <td>2.1</td>
+<<<<<<< Updated upstream
                 <td>25</td>
+=======
+                <td>65467</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/91">Show</a>
                     <a href="/product/91/edit">Edit</a>
@@ -1073,7 +1538,11 @@
                 <td>702</td>
                 <td>Paldo Black Sauce Mixed Noodles</td>
                 <td>0.5</td>
+<<<<<<< Updated upstream
                 <td>47</td>
+=======
+                <td>134</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/92">Show</a>
                     <a href="/product/92/edit">Edit</a>
@@ -1084,7 +1553,11 @@
                 <td>703</td>
                 <td>Carbonara Samyang Noodles</td>
                 <td>1.25</td>
+<<<<<<< Updated upstream
                 <td>53</td>
+=======
+                <td>432</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/93">Show</a>
                     <a href="/product/93/edit">Edit</a>
@@ -1095,7 +1568,11 @@
                 <td>704</td>
                 <td>Ottogi Jin Noodles with Black Sauce Beef Flavor</td>
                 <td>0.56</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>4624</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/94">Show</a>
                     <a href="/product/94/edit">Edit</a>
@@ -1106,7 +1583,11 @@
                 <td>705</td>
                 <td>Koreno Jumbo Noodles with Kimchi Flavor</td>
                 <td>3.58</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>5763</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/95">Show</a>
                     <a href="/product/95/edit">Edit</a>
@@ -1117,7 +1598,11 @@
                 <td>706</td>
                 <td>Koreno Noodles with Shrimp Flavor</td>
                 <td>3.58</td>
+<<<<<<< Updated upstream
                 <td>15</td>
+=======
+                <td>4526</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/96">Show</a>
                     <a href="/product/96/edit">Edit</a>
@@ -1128,7 +1613,11 @@
                 <td>707</td>
                 <td>Paldo Spicy Beef Noodles</td>
                 <td>3.58</td>
+<<<<<<< Updated upstream
                 <td>98</td>
+=======
+                <td>54345</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/97">Show</a>
                     <a href="/product/97/edit">Edit</a>
@@ -1139,7 +1628,11 @@
                 <td>708</td>
                 <td>Chicken Koreno Noodles</td>
                 <td>3.58</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>65467</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/98">Show</a>
                     <a href="/product/98/edit">Edit</a>
@@ -1150,7 +1643,11 @@
                 <td>709</td>
                 <td>Palace Noodles with crab flavor</td>
                 <td>0.35</td>
+<<<<<<< Updated upstream
                 <td>35</td>
+=======
+                <td>134</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/99">Show</a>
                     <a href="/product/99/edit">Edit</a>
@@ -1161,7 +1658,11 @@
                 <td>710</td>
                 <td>Hao Hao Noodles with Acecook shrimp flavor</td>
                 <td>0.18</td>
+<<<<<<< Updated upstream
                 <td>20</td>
+=======
+                <td>432</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/100">Show</a>
                     <a href="/product/100/edit">Edit</a>
@@ -1172,7 +1673,11 @@
                 <td>711</td>
                 <td>Modern Shrimp Thai Hot Pot Noodles</td>
                 <td>0.36</td>
+<<<<<<< Updated upstream
                 <td>54</td>
+=======
+                <td>4624</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/101">Show</a>
                     <a href="/product/101/edit">Edit</a>
@@ -1183,7 +1688,11 @@
                 <td>712</td>
                 <td>Acecook Japanese Udon Noodles</td>
                 <td>0.42</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>5763</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/102">Show</a>
                     <a href="/product/102/edit">Edit</a>
@@ -1194,7 +1703,11 @@
                 <td>713</td>
                 <td>Omachi rib noodles</td>
                 <td>10.6</td>
+<<<<<<< Updated upstream
                 <td>65</td>
+=======
+                <td>4526</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/103">Show</a>
                     <a href="/product/103/edit">Edit</a>
@@ -1205,7 +1718,11 @@
                 <td>714</td>
                 <td>Kokomi noodles</td>
                 <td>4.69</td>
+<<<<<<< Updated upstream
                 <td>45</td>
+=======
+                <td>54345</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/104">Show</a>
                     <a href="/product/104/edit">Edit</a>
@@ -1216,7 +1733,11 @@
                 <td>715</td>
                 <td>Omachi Shrimp Noodles</td>
                 <td>10.6</td>
+<<<<<<< Updated upstream
                 <td>52</td>
+=======
+                <td>65467</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/105">Show</a>
                     <a href="/product/105/edit">Edit</a>
@@ -1227,7 +1748,11 @@
                 <td>716</td>
                 <td>Bongoyang Noodles​​ Hanil Food</td>
                 <td>0.73</td>
+<<<<<<< Updated upstream
                 <td>25</td>
+=======
+                <td>134</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/106">Show</a>
                     <a href="/product/106/edit">Edit</a>
@@ -1238,7 +1763,11 @@
                 <td>717</td>
                 <td>Shin Ramyun Nongshim Instant Noodles</td>
                 <td>1.05</td>
+<<<<<<< Updated upstream
                 <td>47</td>
+=======
+                <td>432</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/107">Show</a>
                     <a href="/product/107/edit">Edit</a>
@@ -1249,7 +1778,11 @@
                 <td>718</td>
                 <td>ShinNongShim Cup Noodles</td>
                 <td>1.13</td>
+<<<<<<< Updated upstream
                 <td>53</td>
+=======
+                <td>4624</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/108">Show</a>
                     <a href="/product/108/edit">Edit</a>
@@ -1260,7 +1793,11 @@
                 <td>719</td>
                 <td>Vifon beef Pho</td>
                 <td>10.58</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>5763</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/109">Show</a>
                     <a href="/product/109/edit">Edit</a>
@@ -1271,7 +1808,11 @@
                 <td>720</td>
                 <td>Vifon chicken Pho</td>
                 <td>10.58</td>
+<<<<<<< Updated upstream
                 <td>74</td>
+=======
+                <td>4526</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/110">Show</a>
                     <a href="/product/110/edit">Edit</a>
@@ -1282,7 +1823,11 @@
                 <td>721</td>
                 <td>CHIN-SU Beef Pho</td>
                 <td>1.41</td>
+<<<<<<< Updated upstream
                 <td>15</td>
+=======
+                <td>54345</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/111">Show</a>
                     <a href="/product/111/edit">Edit</a>
@@ -1293,7 +1838,11 @@
                 <td>722</td>
                 <td>Acecook Beef Pho</td>
                 <td>0.35</td>
+<<<<<<< Updated upstream
                 <td>98</td>
+=======
+                <td>65467</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/112">Show</a>
                     <a href="/product/112/edit">Edit</a>
@@ -1304,7 +1853,11 @@
                 <td>723</td>
                 <td>Acecook Chicken Pho</td>
                 <td>0.35</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>134</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/113">Show</a>
                     <a href="/product/113/edit">Edit</a>
@@ -1315,7 +1868,11 @@
                 <td>724</td>
                 <td>Acecook Seafood Siukay Noodles</td>
                 <td>0.55</td>
+<<<<<<< Updated upstream
                 <td>35</td>
+=======
+                <td>432</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/114">Show</a>
                     <a href="/product/114/edit">Edit</a>
@@ -1326,7 +1883,11 @@
                 <td>725</td>
                 <td>Thai Reeva Spicy Noodles</td>
                 <td>0.2</td>
+<<<<<<< Updated upstream
                 <td>20</td>
+=======
+                <td>4624</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/115">Show</a>
                     <a href="/product/115/edit">Edit</a>
@@ -1337,7 +1898,11 @@
                 <td>726</td>
                 <td>Hao Hao Acecook Noodles with satay flavor</td>
                 <td>0.2</td>
+<<<<<<< Updated upstream
                 <td>54</td>
+=======
+                <td>5763</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/116">Show</a>
                     <a href="/product/116/edit">Edit</a>
@@ -1348,7 +1913,11 @@
                 <td>727</td>
                 <td>Kokomi noodles spicy</td>
                 <td>0.31</td>
+<<<<<<< Updated upstream
                 <td>41</td>
+=======
+                <td>4526</td>
+>>>>>>> Stashed changes
                 <td>
                     <a href="/product/117">Show</a>
                     <a href="/product/117/edit">Edit</a>
@@ -1356,5 +1925,15 @@
             </tr>
                 </tbody>
     </table>
+<<<<<<< Updated upstream
 </body>
 </html>
+=======
+
+    
+                			
+<div id="sfwdta5c960" class="sf-toolbar sf-display-none" role="region" aria-label="Symfony Web Debug Toolbar">    <!-- START of Symfony Web Debug Toolbar --><div id="sfMiniToolbar-a5c960" class="sf-minitoolbar" data-no-turbolink>    <button type="button" title="Show Symfony toolbar" id="sfToolbarMiniToggler-a5c960" accesskey="D" aria-expanded="false" aria-controls="sfToolbarMainContent-a5c960">        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#AAA" d="M12 .9C5.8.9.9 5.8.9 12a11 11 0 1 0 22.2 0A11 11 0 0 0 12 .9zm6.5 6c-.6 0-.9-.3-.9-.8 0-.2 0-.4.2-.6l.2-.4c0-.3-.5-.4-.6-.4-1.8.1-2.3 2.5-2.7 4.4l-.2 1c1 .2 1.8 0 2.2-.3.6-.4-.2-.7-.1-1.2.1-.3.5-.5.7-.6.5 0 .7.5.7.9 0 .7-1 1.8-3 1.8l-.6-.1-.6 2.4c-.4 1.6-.8 3.8-2.4 5.7-1.4 1.7-2.9 1.9-3.5 1.9-1.2 0-1.9-.6-2-1.5 0-.8.7-1.3 1.2-1.3.6 0 1.1.5 1.1 1s-.2.6-.4.6c-.1.1-.3.2-.3.4 0 .1.1.3.4.3.5 0 .8-.3 1.1-.5 1.2-.9 1.6-2.7 2.2-5.7l.1-.7.7-3.2c-.8-.6-1.3-1.4-2.4-1.7-.6-.1-1.1.1-1.5.5-.4.5-.2 1.1.2 1.5l.7.6c.7.8 1.2 1.6 1 2.5-.3 1.5-2 2.6-4 1.9-1.8-.6-2-1.8-1.8-2.5.2-.6.6-.7 1.1-.6.5.2.6.7.6 1.2l-.1.3c-.2.1-.3.3-.3.4-.1.4.4.6.7.7.7.3 1.6-.2 1.8-.8a1 1 0 0 0-.4-1.1l-.7-.8c-.4-.4-1.1-1.4-.7-2.6.1-.5.4-.9.7-1.3a4 4 0 0 1 2.8-.6c1.2.4 1.8 1.1 2.6 1.8.5-1.2 1-2.4 1.8-3.5.9-.9 1.9-1.6 3.1-1.7 1.3.2 2.2.7 2.2 1.6 0 .4-.2 1.1-.9 1.1z"/></svg>    </button></div><div id="sfToolbarClearer-a5c960" class="sf-toolbar-clearer"></div><div id="sfToolbarMainContent-a5c960" class="sf-toolbarreset clear-fix" data-no-turbolink>                                                    <div class="sf-toolbar-block sf-toolbar-block-request sf-toolbar-status-normal " >    <a href="http://127.0.0.1:8000/_profiler/a5c960?panel=request">        <div class="sf-toolbar-icon">        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#AAA" d="M12 .9C5.8.9.9 5.8.9 12a11 11 0 1 0 22.2 0A11 11 0 0 0 12 .9zm6.5 6c-.6 0-.9-.3-.9-.8 0-.2 0-.4.2-.6l.2-.4c0-.3-.5-.4-.6-.4-1.8.1-2.3 2.5-2.7 4.4l-.2 1c1 .2 1.8 0 2.2-.3.6-.4-.2-.7-.1-1.2.1-.3.5-.5.7-.6.5 0 .7.5.7.9 0 .7-1 1.8-3 1.8l-.6-.1-.6 2.4c-.4 1.6-.8 3.8-2.4 5.7-1.4 1.7-2.9 1.9-3.5 1.9-1.2 0-1.9-.6-2-1.5 0-.8.7-1.3 1.2-1.3.6 0 1.1.5 1.1 1s-.2.6-.4.6c-.1.1-.3.2-.3.4 0 .1.1.3.4.3.5 0 .8-.3 1.1-.5 1.2-.9 1.6-2.7 2.2-5.7l.1-.7.7-3.2c-.8-.6-1.3-1.4-2.4-1.7-.6-.1-1.1.1-1.5.5-.4.5-.2 1.1.2 1.5l.7.6c.7.8 1.2 1.6 1 2.5-.3 1.5-2 2.6-4 1.9-1.8-.6-2-1.8-1.8-2.5.2-.6.6-.7 1.1-.6.5.2.6.7.6 1.2l-.1.3c-.2.1-.3.3-.3.4-.1.4.4.6.7.7.7.3 1.6-.2 1.8-.8a1 1 0 0 0-.4-1.1l-.7-.8c-.4-.4-1.1-1.4-.7-2.6.1-.5.4-.9.7-1.3a4 4 0 0 1 2.8-.6c1.2.4 1.8 1.1 2.6 1.8.5-1.2 1-2.4 1.8-3.5.9-.9 1.9-1.6 3.1-1.7 1.3.2 2.2.7 2.2 1.6 0 .4-.2 1.1-.9 1.1z"/></svg>        <span class="sf-toolbar-value sf-toolbar-ajax-request-counter">            Loading&hellip;        </span>    </div>    </a>        <div class="sf-toolbar-info">        <div class="sf-toolbar-info-piece">            <b>Loading the web debug toolbar&hellip;</b>        </div>        <div class="sf-toolbar-info-piece">            Attempt #<span id="sfLoadCounter-a5c960"></span>        </div>        <div class="sf-toolbar-info-piece">            <b>                <button class="sf-cancel-button" type="button" id="sfLoadCancel-a5c960" title="Cancel loading">Cancel</button>            </b>        </div>    </div></div>                                <button class="hide-button" type="button" id="sfToolbarHideButton-a5c960" title="Close Toolbar" accesskey="D" aria-expanded="true" aria-controls="sfToolbarMainContent-a5c960">        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#AAA" d="M21.1 18.3c.8.8.8 2 0 2.8-.4.4-.9.6-1.4.6s-1-.2-1.4-.6L12 14.8l-6.3 6.3c-.4.4-.9.6-1.4.6s-1-.2-1.4-.6a2 2 0 0 1 0-2.8L9.2 12 2.9 5.7a2 2 0 0 1 0-2.8 2 2 0 0 1 2.8 0L12 9.2l6.3-6.3a2 2 0 0 1 2.8 0c.8.8.8 2 0 2.8L14.8 12l6.3 6.3z"/></svg>    </button></div><!-- END of Symfony Web Debug Toolbar --></div><script nonce="e49047fc85fdba37f346a9e7d9366a31">/*<![CDATA[*/    if (typeof Sfjs === 'undefined' || typeof Sfjs.loadToolbar === 'undefined') {    Sfjs = (function() {        "use strict";        if ('classList' in document.documentElement) {            var hasClass = function (el, cssClass) { return el.classList.contains(cssClass); };            var removeClass = function(el, cssClass) { el.classList.remove(cssClass); };            var addClass = function(el, cssClass) { el.classList.add(cssClass); };            var toggleClass = function(el, cssClass) { el.classList.toggle(cssClass); };        } else {            var hasClass = function (el, cssClass) { return el.className.match(new RegExp('\\b' + cssClass + '\\b')); };            var removeClass = function(el, cssClass) { el.className = el.className.replace(new RegExp('\\b' + cssClass + '\\b'), ' '); };            var addClass = function(el, cssClass) { if (!hasClass(el, cssClass)) { el.className += " " + cssClass; } };            var toggleClass = function(el, cssClass) { hasClass(el, cssClass) ? removeClass(el, cssClass) : addClass(el, cssClass); };        }        var noop = function() {};        var profilerStorageKey = 'symfony/profiler/';        var addEventListener;        var el = document.createElement('div');        if (!('addEventListener' in el)) {            addEventListener = function (element, eventName, callback) {                element.attachEvent('on' + eventName, callback);            };        } else {            addEventListener = function (element, eventName, callback) {                element.addEventListener(eventName, callback, false);            };        }        if (navigator.clipboard) {            document.querySelectorAll('[data-clipboard-text]').forEach(function(element) {                removeClass(element, 'hidden');                element.addEventListener('click', function() {                    navigator.clipboard.writeText(element.getAttribute('data-clipboard-text'));                })            });        }        var request = function(url, onSuccess, onError, payload, options, tries) {            var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');            options = options || {};            options.retry = options.retry || false;            tries = tries || 1;            /* this delays for 125, 375, 625, 875, and 1000, ... */            var delay = tries < 5 ? (tries - 0.5) * 250 : 1000;            xhr.open(options.method || 'GET', url, true);            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');            xhr.onreadystatechange = function(state) {                if (4 !== xhr.readyState) {                    return null;                }                if (xhr.status == 404 && options.retry && !options.stop) {                    setTimeout(function() {                        if (options.stop) {                            return;                        }                        request(url, onSuccess, onError, payload, options, tries + 1);                    }, delay);                    return null;                }                if (200 === xhr.status) {                    (onSuccess || noop)(xhr);                } else {                    (onError || noop)(xhr);                }            };            if (options.onSend) {                options.onSend(tries);            }            xhr.send(payload || '');        };        var getPreference = function(name) {            if (!window.localStorage) {                return null;            }            return localStorage.getItem(profilerStorageKey + name);        };        var setPreference = function(name, value) {            if (!window.localStorage) {                return null;            }            localStorage.setItem(profilerStorageKey + name, value);        };        var requestStack = [];        var extractHeaders = function(xhr, stackElement) {            /* Here we avoid to call xhr.getResponseHeader in order to */            /* prevent polluting the console with CORS security errors */            var allHeaders = xhr.getAllResponseHeaders();            var ret;            if (ret = allHeaders.match(/^x-debug-token:\s+(.*)$/im)) {                stackElement.profile = ret[1];            }            if (ret = allHeaders.match(/^x-debug-token-link:\s+(.*)$/im)) {                stackElement.profilerUrl = ret[1];            }            if (ret = allHeaders.match(/^Symfony-Debug-Toolbar-Replace:\s+(.*)$/im)) {                stackElement.toolbarReplaceFinished = false;                stackElement.toolbarReplace = '1' === ret[1];            }        };        var successStreak = 4;        var pendingRequests = 0;        var renderAjaxRequests = function() {            var requestCounter = document.querySelector('.sf-toolbar-ajax-request-counter');            if (!requestCounter) {                return;            }            requestCounter.textContent = requestStack.length;            var infoSpan = document.querySelector(".sf-toolbar-ajax-info");            if (infoSpan) {                infoSpan.textContent = requestStack.length + ' AJAX request' + (requestStack.length !== 1 ? 's' : '');            }            var ajaxToolbarPanel = document.querySelector('.sf-toolbar-block-ajax');            if (requestStack.length) {                ajaxToolbarPanel.style.display = 'block';            } else {                ajaxToolbarPanel.style.display = 'none';            }            if (pendingRequests > 0) {                addClass(ajaxToolbarPanel, 'sf-ajax-request-loading');            } else if (successStreak < 4) {                addClass(ajaxToolbarPanel, 'sf-toolbar-status-red');                removeClass(ajaxToolbarPanel, 'sf-ajax-request-loading');            } else {                removeClass(ajaxToolbarPanel, 'sf-ajax-request-loading');                removeClass(ajaxToolbarPanel, 'sf-toolbar-status-red');            }        };        var startAjaxRequest = function(index) {            var tbody = document.querySelector('.sf-toolbar-ajax-request-list');            if (!tbody) {                return;            }            var nbOfAjaxRequest = tbody.rows.length;            if (nbOfAjaxRequest >= 100) {                tbody.deleteRow(0);            }            var request = requestStack[index];            pendingRequests++;            var row = document.createElement('tr');            request.DOMNode = row;            var requestNumberCell = document.createElement('td');            requestNumberCell.textContent = index + 1;            row.appendChild(requestNumberCell);            var profilerCell = document.createElement('td');            profilerCell.textContent = 'n/a';            row.appendChild(profilerCell);            var methodCell = document.createElement('td');            methodCell.textContent = request.method;            row.appendChild(methodCell);            var typeCell = document.createElement('td');            typeCell.textContent = request.type;            row.appendChild(typeCell);            var statusCodeCell = document.createElement('td');            var statusCode = document.createElement('span');            statusCode.textContent = 'n/a';            statusCodeCell.appendChild(statusCode);            row.appendChild(statusCodeCell);            var pathCell = document.createElement('td');            pathCell.className = 'sf-ajax-request-url';            if ('GET' === request.method) {                var pathLink = document.createElement('a');                pathLink.setAttribute('href', request.url);                pathLink.textContent = request.url;                pathCell.appendChild(pathLink);            } else {                pathCell.textContent = request.url;            }            pathCell.setAttribute('title', request.url);            row.appendChild(pathCell);            var durationCell = document.createElement('td');            durationCell.className = 'sf-ajax-request-duration';            durationCell.textContent = 'n/a';            row.appendChild(durationCell);            request.liveDurationHandle = setInterval(function() {                durationCell.textContent = (new Date() - request.start) + ' ms';            }, 100);            row.className = 'sf-ajax-request sf-ajax-request-loading';            tbody.insertBefore(row, null);            var toolbarInfo = document.querySelector('.sf-toolbar-block-ajax .sf-toolbar-info');            toolbarInfo.scrollTop = toolbarInfo.scrollHeight;            renderAjaxRequests();        };        var finishAjaxRequest = function(index) {            var request = requestStack[index];            clearInterval(request.liveDurationHandle);            if (!request.DOMNode) {                return;            }            if (request.toolbarReplace && !request.toolbarReplaceFinished && request.profile) {                /* Flag as complete because finishAjaxRequest can be called multiple times. */                request.toolbarReplaceFinished = true;                /* Search up through the DOM to find the toolbar's container ID. */                for (var elem = request.DOMNode; elem && elem !== document; elem = elem.parentNode) {                    if (elem.id.match(/^sfwdt/)) {                        Sfjs.loadToolbar(elem.id.replace(/^sfwdt/, ''), request.profile);                        break;                    }                }            }            pendingRequests--;            var row = request.DOMNode;            /* Unpack the children from the row */            var profilerCell = row.children[1];            var methodCell = row.children[2];            var statusCodeCell = row.children[4];            var statusCodeElem = statusCodeCell.children[0];            var durationCell = row.children[6];            if (request.error) {                row.className = 'sf-ajax-request sf-ajax-request-error';                methodCell.className = 'sf-ajax-request-error';                successStreak = 0;            } else {                row.className = 'sf-ajax-request sf-ajax-request-ok';                successStreak++;            }            if (request.statusCode) {                if (request.statusCode < 300) {                    statusCodeElem.setAttribute('class', 'sf-toolbar-status');                } else if (request.statusCode < 400) {                    statusCodeElem.setAttribute('class', 'sf-toolbar-status sf-toolbar-status-yellow');                } else {                    statusCodeElem.setAttribute('class', 'sf-toolbar-status sf-toolbar-status-red');                }                statusCodeElem.textContent = request.statusCode;            } else {                statusCodeElem.setAttribute('class', 'sf-toolbar-status sf-toolbar-status-red');            }            if (request.duration) {                durationCell.textContent = request.duration + ' ms';            }            if (request.profilerUrl) {                profilerCell.textContent = '';                var profilerLink = document.createElement('a');                profilerLink.setAttribute('href', request.profilerUrl);                profilerLink.textContent = request.profile;                profilerCell.appendChild(profilerLink);            }            renderAjaxRequests();        };                    if (window.fetch && window.fetch.polyfill === undefined) {                var oldFetch = window.fetch;                window.fetch = function () {                    var promise = oldFetch.apply(this, arguments);                    var url = arguments[0];                    var params = arguments[1];                    var paramType = Object.prototype.toString.call(arguments[0]);                    if (paramType === '[object Request]') {                        url = arguments[0].url;                        params = {                            method: arguments[0].method,                            credentials: arguments[0].credentials,                            headers: arguments[0].headers,                            mode: arguments[0].mode,                            redirect: arguments[0].redirect                        };                    } else {                        url = String(url);                    }                    if (!url.match(new RegExp("^\/((index|app(_[\\w]+)?)\\.php\/)?_wdt"))) {                        var method = 'GET';                        if (params && params.method !== undefined) {                            method = params.method;                        }                        var stackElement = {                            error: false,                            url: url,                            method: method,                            type: 'fetch',                            start: new Date()                        };                        var idx = requestStack.push(stackElement) - 1;                        promise.then(function (r) {                            stackElement.duration = new Date() - stackElement.start;                            stackElement.error = r.status < 200 || r.status >= 400;                            stackElement.statusCode = r.status;                            stackElement.profile = r.headers.get('x-debug-token');                            stackElement.profilerUrl = r.headers.get('x-debug-token-link');                            stackElement.toolbarReplaceFinished = false;                            stackElement.toolbarReplace = '1' === r.headers.get('Symfony-Debug-Toolbar-Replace');                            finishAjaxRequest(idx);                        }, function (e){                            stackElement.error = true;                            finishAjaxRequest(idx);                        });                        startAjaxRequest(idx);                    }                    return promise;                };            }            if (window.XMLHttpRequest && XMLHttpRequest.prototype.addEventListener) {                var proxied = XMLHttpRequest.prototype.open;                XMLHttpRequest.prototype.open = function(method, url, async, user, pass) {                    var self = this;                    /* prevent logging AJAX calls to static and inline files, like templates */                    var path = url;                    if (url.slice(0, 1) === '/') {                        if (0 === url.indexOf('')) {                            path = url.slice(0);                        }                    }                    else if (0 === url.indexOf('http\u003A\/\/127.0.0.1\u003A8000')) {                        path = url.slice(21);                    }                    if (!path.match(new RegExp("^\/((index|app(_[\\w]+)?)\\.php\/)?_wdt"))) {                        var stackElement = {                            error: false,                            url: url,                            method: method,                            type: 'xhr',                            start: new Date()                        };                        var idx = requestStack.push(stackElement) - 1;                        this.addEventListener('readystatechange', function() {                            if (self.readyState == 4) {                                stackElement.duration = new Date() - stackElement.start;                                stackElement.error = self.status < 200 || self.status >= 400;                                stackElement.statusCode = self.status;                                extractHeaders(self, stackElement);                                finishAjaxRequest(idx);                            }                        }, false);                        startAjaxRequest(idx);                    }                    proxied.apply(this, Array.prototype.slice.call(arguments));                };            }                return {            hasClass: hasClass,            removeClass: removeClass,            addClass: addClass,            toggleClass: toggleClass,            getPreference: getPreference,            setPreference: setPreference,            addEventListener: addEventListener,            request: request,            renderAjaxRequests: renderAjaxRequests,            getSfwdt: function(token) {                if (!this.sfwdt) {                    this.sfwdt = document.getElementById('sfwdt' + token);                }                return this.sfwdt;            },            load: function(selector, url, onSuccess, onError, options) {                var el = document.getElementById(selector);                if (el && el.getAttribute('data-sfurl') !== url) {                    request(                        url,                        function(xhr) {                            el.innerHTML = xhr.responseText;                            el.setAttribute('data-sfurl', url);                            removeClass(el, 'loading');                            var pending = pendingRequests;                            for (var i = 0; i < requestStack.length; i++) {                                startAjaxRequest(i);                                if (requestStack[i].duration) {                                    finishAjaxRequest(i);                                }                            }                            /* Revert the pending state in case there was a start called without a finish above. */                            pendingRequests = pending;                            (onSuccess || noop)(xhr, el);                        },                        function(xhr) { (onError || noop)(xhr, el); },                        '',                        options                    );                }                return this;            },            showToolbar: function(token) {                var sfwdt = this.getSfwdt(token);                removeClass(sfwdt, 'sf-display-none');                if (getPreference('toolbar/displayState') == 'none') {                    document.getElementById('sfToolbarMainContent-' + token).style.display = 'none';                    document.getElementById('sfToolbarClearer-' + token).style.display = 'none';                    document.getElementById('sfMiniToolbar-' + token).style.display = 'block';                } else {                    document.getElementById('sfToolbarMainContent-' + token).style.display = 'block';                    document.getElementById('sfToolbarClearer-' + token).style.display = 'block';                    document.getElementById('sfMiniToolbar-' + token).style.display = 'none';                }            },            hideToolbar: function(token) {                var sfwdt = this.getSfwdt(token);                addClass(sfwdt, 'sf-display-none');            },            initToolbar: function(token) {                this.showToolbar(token);                var hideButton = document.getElementById('sfToolbarHideButton-' + token);                var hideButtonSvg = hideButton.querySelector('svg');                hideButtonSvg.setAttribute('aria-hidden', 'true');                hideButtonSvg.setAttribute('focusable', 'false');                addEventListener(hideButton, 'click', function (event) {                    event.preventDefault();                    var p = this.parentNode;                    p.style.display = 'none';                    (p.previousElementSibling || p.previousSibling).style.display = 'none';                    document.getElementById('sfMiniToolbar-' + token).style.display = 'block';                    setPreference('toolbar/displayState', 'none');                });                var showButton = document.getElementById('sfToolbarMiniToggler-' + token);                var showButtonSvg = showButton.querySelector('svg');                showButtonSvg.setAttribute('aria-hidden', 'true');                showButtonSvg.setAttribute('focusable', 'false');                addEventListener(showButton, 'click', function (event) {                    event.preventDefault();                    var elem = this.parentNode;                    if (elem.style.display == 'none') {                        document.getElementById('sfToolbarMainContent-' + token).style.display = 'none';                        document.getElementById('sfToolbarClearer-' + token).style.display = 'none';                        elem.style.display = 'block';                    } else {                        document.getElementById('sfToolbarMainContent-' + token).style.display = 'block';                        document.getElementById('sfToolbarClearer-' + token).style.display = 'block';                        elem.style.display = 'none'                    }                    setPreference('toolbar/displayState', 'block');                });            },            loadToolbar: function(token, newToken) {                var that = this;                var triesCounter = document.getElementById('sfLoadCounter-' + token);                var options = {                    retry: true,                    onSend: function (count) {                        if (count === 3) {                            that.initToolbar(token);                        }                        if (triesCounter) {                            triesCounter.textContent = count;                        }                    },                };                var cancelButton = document.getElementById('sfLoadCancel-' + token);                if (cancelButton) {                    addEventListener(cancelButton, 'click', function (event) {                        event.preventDefault();                        options.stop = true;                        that.hideToolbar(token);                    });                }                newToken = (newToken || token);                this.load(                    'sfwdt' + token,                    'http\u003A\/\/127.0.0.1\u003A8000\/_wdt\/xxxxxx'.replace(/xxxxxx/, newToken),                    function(xhr, el) {                        /* Do nothing in the edge case where the toolbar has already been replaced with a new one */                        if (!document.getElementById('sfToolbarMainContent-' + newToken)) {                            return;                        }                        /* Evaluate in global scope scripts embedded inside the toolbar */                        var i, scripts = [].slice.call(el.querySelectorAll('script'));                        for (i = 0; i < scripts.length; ++i) {                            eval.call({}, scripts[i].firstChild.nodeValue);                        }                        el.style.display = -1 !== xhr.responseText.indexOf('sf-toolbarreset') ? 'block' : 'none';                        if (el.style.display == 'none') {                            return;                        }                        that.initToolbar(newToken);                        /* Handle toolbar-info position */                        var toolbarBlocks = [].slice.call(el.querySelectorAll('.sf-toolbar-block'));                        for (i = 0; i < toolbarBlocks.length; ++i) {                            toolbarBlocks[i].onmouseover = function () {                                var toolbarInfo = this.querySelectorAll('.sf-toolbar-info')[0];                                var pageWidth = document.body.clientWidth;                                var elementWidth = toolbarInfo.offsetWidth;                                var leftValue = (elementWidth + this.offsetLeft) - pageWidth;                                var rightValue = (elementWidth + (pageWidth - this.offsetLeft)) - pageWidth;                                /* Reset right and left value, useful on window resize */                                toolbarInfo.style.right = '';                                toolbarInfo.style.left = '';                                if (elementWidth > pageWidth) {                                    toolbarInfo.style.left = 0;                                }                                else if (leftValue > 0 && rightValue > 0) {                                    toolbarInfo.style.right = (rightValue * -1) + 'px';                                } else if (leftValue < 0) {                                    toolbarInfo.style.left = 0;                                } else {                                    toolbarInfo.style.right = '0px';                                }                            };                        }                        renderAjaxRequests();                        addEventListener(document.querySelector('.sf-toolbar-ajax-clear'), 'click', function() {                            requestStack = [];                            renderAjaxRequests();                            successStreak = 4;                            document.querySelector('.sf-toolbar-ajax-request-list').innerHTML = '';                        });                        addEventListener(document.querySelector('.sf-toolbar-block-ajax'), 'mouseenter', function (event) {                            var elem = document.querySelector('.sf-toolbar-block-ajax .sf-toolbar-info');                            elem.scrollTop = elem.scrollHeight;                        });                        addEventListener(document.querySelector('.sf-toolbar-block-ajax > .sf-toolbar-icon'), 'click', function (event) {                            event.preventDefault();                            toggleClass(this.parentNode, 'hover');                        });                        var dumpInfo = document.querySelector('.sf-toolbar-block-dump .sf-toolbar-info');                        if (null !== dumpInfo) {                            addEventListener(dumpInfo, 'sfbeforedumpcollapse', function () {                                dumpInfo.style.minHeight = dumpInfo.getBoundingClientRect().height+'px';                            });                            addEventListener(dumpInfo, 'mouseleave', function () {                                dumpInfo.style.minHeight = '';                            });                        }                    },                    function(xhr) {                        if (xhr.status !== 0 && !options.stop) {                            var sfwdt = that.getSfwdt(token);                            sfwdt.innerHTML = '\                                <div class="sf-toolbarreset">\                                    <div class="sf-toolbar-icon"><svg width="26" height="28" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 26 28" enable-background="new 0 0 26 28" xml:space="preserve"><path fill="#FFFFFF" d="M13 0C5.8 0 0 5.8 0 13c0 7.2 5.8 13 13 13c7.2 0 13-5.8 13-13C26 5.8 20.2 0 13 0z M20 7.5 c-0.6 0-1-0.3-1-0.9c0-0.2 0-0.4 0.2-0.6c0.1-0.3 0.2-0.3 0.2-0.4c0-0.3-0.5-0.4-0.7-0.4c-2 0.1-2.5 2.7-2.9 4.8l-0.2 1.1 c1.1 0.2 1.9 0 2.4-0.3c0.6-0.4-0.2-0.8-0.1-1.3C18 9.2 18.4 9 18.7 8.9c0.5 0 0.8 0.5 0.8 1c0 0.8-1.1 2-3.3 1.9 c-0.3 0-0.5 0-0.7-0.1L15 14.1c-0.4 1.7-0.9 4.1-2.6 6.2c-1.5 1.8-3.1 2.1-3.8 2.1c-1.3 0-2.1-0.6-2.2-1.6c0-0.9 0.8-1.4 1.3-1.4 c0.7 0 1.2 0.5 1.2 1.1c0 0.5-0.2 0.6-0.4 0.7c-0.1 0.1-0.3 0.2-0.3 0.4c0 0.1 0.1 0.3 0.4 0.3c0.5 0 0.9-0.3 1.2-0.5 c1.3-1 1.7-2.9 2.4-6.2l0.1-0.8c0.2-1.1 0.5-2.3 0.8-3.5c-0.9-0.7-1.4-1.5-2.6-1.8c-0.8-0.2-1.3 0-1.7 0.4C8.4 10 8.6 10.7 9 11.1 l0.7 0.7c0.8 0.9 1.3 1.7 1.1 2.7c-0.3 1.6-2.1 2.8-4.3 2.1c-1.9-0.6-2.2-1.9-2-2.7c0.2-0.6 0.7-0.8 1.2-0.6 c0.5 0.2 0.7 0.8 0.6 1.3c0 0.1 0 0.1-0.1 0.3C6 15 5.9 15.2 5.9 15.3c-0.1 0.4 0.4 0.7 0.8 0.8c0.8 0.3 1.7-0.2 1.9-0.9 c0.2-0.6-0.2-1.1-0.4-1.2l-0.8-0.9c-0.4-0.4-1.2-1.5-0.8-2.8c0.2-0.5 0.5-1 0.9-1.4c1-0.7 2-0.8 3-0.6c1.3 0.4 1.9 1.2 2.8 1.9 c0.5-1.3 1.1-2.6 2-3.8c0.9-1 2-1.7 3.3-1.8C20 4.8 21 5.4 21 6.3C21 6.7 20.8 7.5 20 7.5z"/></svg></div>\                                    An error occurred while loading the web debug toolbar. <a href="http\u003A\/\/127.0.0.1\u003A8000\/_profiler\/' + newToken + '>Open the web profiler.</a>\                                </div>\                            ';                            sfwdt.setAttribute('class', 'sf-toolbar sf-error-toolbar');                        }                    },                    options                );                return this;            },            toggle: function(selector, elOn, elOff) {                var tmp = elOn.style.display,                    el = document.getElementById(selector);                elOn.style.display = elOff.style.display;                elOff.style.display = tmp;                if (el) {                    el.style.display = 'none' === tmp ? 'none' : 'block';                }                return this;            },            createTabs: function() {                var tabGroups = document.querySelectorAll('.sf-tabs:not([data-processed=true])');                /* create the tab navigation for each group of tabs */                for (var i = 0; i < tabGroups.length; i++) {                    var tabs = tabGroups[i].querySelectorAll(':scope > .tab');                    var tabNavigation = document.createElement('ul');                    tabNavigation.className = 'tab-navigation';                    var selectedTabId = 'tab-' + i + '-0'; /* select the first tab by default */                    for (var j = 0; j < tabs.length; j++) {                        var tabId = 'tab-' + i + '-' + j;                        var tabTitle = tabs[j].querySelector('.tab-title').innerHTML;                        var tabNavigationItem = document.createElement('li');                        tabNavigationItem.setAttribute('data-tab-id', tabId);                        if (hasClass(tabs[j], 'active')) { selectedTabId = tabId; }                        if (hasClass(tabs[j], 'disabled')) { addClass(tabNavigationItem, 'disabled'); }                        tabNavigationItem.innerHTML = tabTitle;                        tabNavigation.appendChild(tabNavigationItem);                        var tabContent = tabs[j].querySelector('.tab-content');                        tabContent.parentElement.setAttribute('id', tabId);                    }                    tabGroups[i].insertBefore(tabNavigation, tabGroups[i].firstChild);                    addClass(document.querySelector('[data-tab-id="' + selectedTabId + '"]'), 'active');                }                /* display the active tab and add the 'click' event listeners */                for (i = 0; i < tabGroups.length; i++) {                    tabNavigation = tabGroups[i].querySelectorAll(':scope > .tab-navigation li');                    for (j = 0; j < tabNavigation.length; j++) {                        tabId = tabNavigation[j].getAttribute('data-tab-id');                        document.getElementById(tabId).querySelector('.tab-title').className = 'hidden';                        if (hasClass(tabNavigation[j], 'active')) {                            document.getElementById(tabId).className = 'block';                        } else {                            document.getElementById(tabId).className = 'hidden';                        }                        tabNavigation[j].addEventListener('click', function(e) {                            var activeTab = e.target || e.srcElement;                            /* needed because when the tab contains HTML contents, user can click */                            /* on any of those elements instead of their parent '<li>' element */                            while (activeTab.tagName.toLowerCase() !== 'li') {                                activeTab = activeTab.parentNode;                            }                            /* get the full list of tabs through the parent of the active tab element */                            var tabNavigation = activeTab.parentNode.children;                            for (var k = 0; k < tabNavigation.length; k++) {                                var tabId = tabNavigation[k].getAttribute('data-tab-id');                                document.getElementById(tabId).className = 'hidden';                                removeClass(tabNavigation[k], 'active');                            }                            addClass(activeTab, 'active');                            var activeTabId = activeTab.getAttribute('data-tab-id');                            document.getElementById(activeTabId).className = 'block';                        });                    }                    tabGroups[i].setAttribute('data-processed', 'true');                }            },            createToggles: function() {                var toggles = document.querySelectorAll('.sf-toggle:not([data-processed=true])');                for (var i = 0; i < toggles.length; i++) {                    var elementSelector = toggles[i].getAttribute('data-toggle-selector');                    var element = document.querySelector(elementSelector);                    addClass(element, 'sf-toggle-content');                    if (toggles[i].hasAttribute('data-toggle-initial') && toggles[i].getAttribute('data-toggle-initial') == 'display') {                        addClass(toggles[i], 'sf-toggle-on');                        addClass(element, 'sf-toggle-visible');                    } else {                        addClass(toggles[i], 'sf-toggle-off');                        addClass(element, 'sf-toggle-hidden');                    }                    addEventListener(toggles[i], 'click', function(e) {                        e.preventDefault();                        if ('' !== window.getSelection().toString()) {                            /* Don't do anything on text selection */                            return;                        }                        var toggle = e.target || e.srcElement;                        /* needed because when the toggle contains HTML contents, user can click */                        /* on any of those elements instead of their parent '.sf-toggle' element */                        while (!hasClass(toggle, 'sf-toggle')) {                            toggle = toggle.parentNode;                        }                        var element = document.querySelector(toggle.getAttribute('data-toggle-selector'));                        toggleClass(toggle, 'sf-toggle-on');                        toggleClass(toggle, 'sf-toggle-off');                        toggleClass(element, 'sf-toggle-hidden');                        toggleClass(element, 'sf-toggle-visible');                        /* the toggle doesn't change its contents when clicking on it */                        if (!toggle.hasAttribute('data-toggle-alt-content')) {                            return;                        }                        if (!toggle.hasAttribute('data-toggle-original-content')) {                            toggle.setAttribute('data-toggle-original-content', toggle.innerHTML);                        }                        var currentContent = toggle.innerHTML;                        var originalContent = toggle.getAttribute('data-toggle-original-content');                        var altContent = toggle.getAttribute('data-toggle-alt-content');                        toggle.innerHTML = currentContent !== altContent ? altContent : originalContent;                    });                    /* Prevents from disallowing clicks on links inside toggles */                    var toggleLinks = toggles[i].querySelectorAll('a');                    for (var j = 0; j < toggleLinks.length; j++) {                        addEventListener(toggleLinks[j], 'click', function(e) {                            e.stopPropagation();                        });                    }                    /* Prevents from disallowing clicks on "copy to clipboard" elements inside toggles */                    var copyToClipboardElements = toggles[i].querySelectorAll('span[data-clipboard-text]');                    for (var k = 0; k < copyToClipboardElements.length; k++) {                        addEventListener(copyToClipboardElements[k], 'click', function(e) {                            e.stopPropagation();                        });                    }                    toggles[i].setAttribute('data-processed', 'true');                }            },            initializeLogsTable: function() {                Sfjs.updateLogsTable();                document.querySelectorAll('.log-filter input').forEach((input) => {                    input.addEventListener('change', () => { Sfjs.updateLogsTable(); });                });                document.querySelectorAll('.filter-select-all-or-none button').forEach((link) => {                    link.addEventListener('click', () => {                        const selectAll = link.classList.contains('select-all');                        link.closest('.log-filter-content').querySelectorAll('input').forEach((input) => {                            input.checked = selectAll;                        });                        Sfjs.updateLogsTable();                    });                });                document.body.addEventListener('click', (event) => {                    document.querySelectorAll('details.log-filter').forEach((filterElement) => {                        if (!filterElement.contains(event.target) && filterElement.open) {                            filterElement.open = false;                        }                    });                });            },            updateLogsTable: function() {                const selectedType = document.querySelector('#log-filter-type input:checked').value;                const priorities = document.querySelectorAll('#log-filter-priority input');                const allPriorities = Array.from(priorities).map((input) => input.value);                const selectedPriorities = Array.from(priorities).filter((input) => input.checked).map((input) => input.value);                const channels = document.querySelectorAll('#log-filter-channel input');                const selectedChannels = Array.from(channels).filter((input) => input.checked).map((input) => input.value);                const logs = document.querySelector('table.logs');                if (null === logs) {                    return;                }                /* hide rows that don't match the current filters */                let numVisibleRows = 0;                logs.querySelectorAll('tbody tr').forEach((row) => {                    if ('all' !== selectedType && selectedType !== row.getAttribute('data-type')) {                        row.style.display = 'none';                        return;                    }                    const priority = row.getAttribute('data-priority');                    if (false === selectedPriorities.includes(priority) && true === allPriorities.includes(priority)) {                        row.style.display = 'none';                        return;                    }                    if ('' !== row.getAttribute('data-channel') && false === selectedChannels.includes(row.getAttribute('data-channel'))) {                        row.style.display = 'none';                        return;                    }                    row.style.display = 'table-row';                    numVisibleRows++;                });                document.querySelector('table.logs').style.display = 0 === numVisibleRows ? 'none' : 'table';                document.querySelector('.no-logs-message').style.display = 0 === numVisibleRows ? 'block' : 'none';                /* update the selected totals of all filters */                document.querySelector('#log-filter-priority .filter-active-num').innerText = (priorities.length === selectedPriorities.length) ? 'All' : selectedPriorities.length;                document.querySelector('#log-filter-channel .filter-active-num').innerText = (channels.length === selectedChannels.length) ? 'All' : selectedChannels.length;                /* update the currently selected "log type" tab */                document.querySelectorAll('#log-filter-type li').forEach((tab) => tab.classList.remove('active'));                document.querySelector(`#log-filter-type input[value="${selectedType}"]`).parentElement.classList.add('active');            },        };    })();    Sfjs.addEventListener(document, 'DOMContentLoaded', function() {        Sfjs.createTabs();        Sfjs.createToggles();    });}/*]]>*/</script><style nonce="7b775d05a96e24cfe43fcbd5ca4794f8">    .sf-minitoolbar {    background-color: #222;    border-top-left-radius: 4px;    bottom: 0;    box-sizing: border-box;    display: none;    height: 36px;    padding: 6px;    position: fixed;    right: 0;    z-index: 99999;}.sf-minitoolbar button {    background-color: transparent;    padding: 0;    border: none;}.sf-minitoolbar svg,.sf-minitoolbar img {    max-height: 24px;    max-width: 24px;    display: inline;}.sf-toolbar-clearer {    clear: both;    height: 36px;}.sf-display-none {    display: none;}.sf-toolbarreset * {    box-sizing: content-box;    vertical-align: baseline;    letter-spacing: normal;    width: auto;}.sf-toolbarreset {    background-color: #222;    bottom: 0;    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);    color: #EEE;    font: 11px Arial, sans-serif;    left: 0;    margin: 0;    padding: 0 36px 0 0;    position: fixed;    right: 0;    text-align: left;    text-transform: none;    z-index: 99999;    direction: ltr;    /* neutralize the aliasing defined by external CSS styles */    -webkit-font-smoothing: subpixel-antialiased;    -moz-osx-font-smoothing: auto;}.sf-toolbarreset abbr {    border: dashed #777;    border-width: 0 0 1px;}.sf-toolbarreset svg,.sf-toolbarreset img {    height: 20px;    width: 20px;    display: inline-block;}.sf-toolbarreset .sf-cancel-button {    color: #444;}.sf-toolbarreset .hide-button {    background: #444;    display: block;    position: absolute;    top: 0;    right: 0;    width: 36px;    height: 36px;    cursor: pointer;    text-align: center;    border: none;    margin: 0;    padding: 0;}.sf-toolbarreset .hide-button svg {    max-height: 18px;    margin-top: 1px;}.sf-toolbar-block {    cursor: default;    display: block;    float: left;    height: 36px;    margin-right: 0;    white-space: nowrap;    max-width: 15%;}.sf-toolbar-block > a,.sf-toolbar-block > a:hover {    display: block;    text-decoration: none;    background-color: transparent;    color: inherit;}.sf-toolbar-block span {    display: inline-block;}.sf-toolbar-block .sf-toolbar-value {    color: #F5F5F5;    font-size: 13px;    line-height: 36px;    padding: 0;}.sf-toolbar-block .sf-toolbar-label,.sf-toolbar-block .sf-toolbar-class-separator {    color: #AAA;    font-size: 12px;}.sf-toolbar-block .sf-toolbar-info {    border-collapse: collapse;    display: table;    z-index: 100000;}.sf-toolbar-block hr {    border-top: 1px solid #777;    margin: 4px 0;    padding-top: 4px;}.sf-toolbar-block .sf-toolbar-info-piece {    /* this 'border-bottom' trick is needed because 'margin-bottom' doesn't work for table rows */    border-bottom: solid transparent 3px;    display: table-row;}.sf-toolbar-block .sf-toolbar-info-piece-additional,.sf-toolbar-block .sf-toolbar-info-piece-additional-detail {    display: none;}.sf-toolbar-block .sf-toolbar-info-group {    margin-bottom: 4px;    padding-bottom: 2px;    border-bottom: 1px solid #333333;}.sf-toolbar-block .sf-toolbar-info-group:last-child {    margin-bottom: 0;    padding-bottom: 0;    border-bottom: none;}.sf-toolbar-block .sf-toolbar-info-piece .sf-toolbar-status {    padding: 2px 5px;    margin-bottom: 0;}.sf-toolbar-block .sf-toolbar-info-piece .sf-toolbar-status + .sf-toolbar-status {    margin-left: 4px;}.sf-toolbar-block .sf-toolbar-info-piece:last-child {    margin-bottom: 0;}div.sf-toolbar .sf-toolbar-block .sf-toolbar-info-piece a {    color: #99CDD8;    text-decoration: underline;}div.sf-toolbar .sf-toolbar-block a:hover {    text-decoration: none;}.sf-toolbar-block .sf-toolbar-info-piece b {    color: #AAA;    display: table-cell;    font-size: 11px;    padding: 4px 8px 4px 0;}.sf-toolbar-block:not(.sf-toolbar-block-dump) .sf-toolbar-info-piece span {    color: #F5F5F5;}.sf-toolbar-block .sf-toolbar-info-piece span {    font-size: 12px;}.sf-toolbar-block .sf-toolbar-info {    background-color: #444;    bottom: 36px;    color: #F5F5F5;    display: none;    padding: 9px 0;    position: absolute;}.sf-toolbar-block .sf-toolbar-info:empty {    visibility: hidden;}.sf-toolbar-block .sf-toolbar-status {    display: inline-block;    color: #FFF;    background-color: #666;    padding: 3px 6px;    margin-bottom: 2px;    vertical-align: middle;    min-width: 15px;    min-height: 13px;    text-align: center;}.sf-toolbar-block .sf-toolbar-status-green {    background-color: #4F805D;}.sf-toolbar-block .sf-toolbar-status-red {    background-color: #B0413E;}.sf-toolbar-block .sf-toolbar-status-yellow {    background-color: #A46A1F;}.sf-toolbar-block.sf-toolbar-status-green {    background-color: #4F805D;    color: #FFF;}.sf-toolbar-block.sf-toolbar-status-red {    background-color: #B0413E;    color: #FFF;}.sf-toolbar-block.sf-toolbar-status-yellow {    background-color: #A46A1F;    color: #FFF;}.sf-toolbar-block-request .sf-toolbar-status {    color: #FFF;    display: inline-block;    font-size: 14px;    height: 36px;    line-height: 36px;    padding: 0 10px;}.sf-toolbar-block-request .sf-toolbar-info-piece a {    background-color: transparent;    text-decoration: none;}.sf-toolbar-block-request .sf-toolbar-info-piece a:hover {    text-decoration: underline;}.sf-toolbar-block-request .sf-toolbar-redirection-status {    font-weight: normal;    padding: 2px 4px;    line-height: 18px;}.sf-toolbar-block-request .sf-toolbar-info-piece span.sf-toolbar-redirection-method {    font-size: 12px;    height: 17px;    line-height: 17px;    margin-right: 5px;}.sf-toolbar-block-ajax .sf-toolbar-icon {    cursor: pointer;}.sf-toolbar-status-green .sf-toolbar-label,.sf-toolbar-status-yellow .sf-toolbar-label,.sf-toolbar-status-red .sf-toolbar-label {    color: #FFF;}.sf-toolbar-status-green svg path,.sf-toolbar-status-green svg .sf-svg-path,.sf-toolbar-status-red svg path,.sf-toolbar-status-red svg .sf-svg-path,.sf-toolbar-status-yellow svg path,.sf-toolbar-status-yellow svg .sf-svg-path {    fill: #FFF;}.sf-toolbar-block-config svg path,.sf-toolbar-block-config svg .sf-svg-path {    fill: #FFF;}.sf-toolbar-block .sf-toolbar-icon {    display: block;    height: 36px;    padding: 0 7px;    overflow: hidden;    text-overflow: ellipsis;}.sf-toolbar-block-request .sf-toolbar-icon {    padding-left: 0;    padding-right: 0;}.sf-toolbar-block .sf-toolbar-icon img,.sf-toolbar-block .sf-toolbar-icon svg {    border-width: 0;    position: relative;    top: 8px;    vertical-align: baseline;}.sf-toolbar-block .sf-toolbar-icon img + span,.sf-toolbar-block .sf-toolbar-icon svg + span {    margin-left: 4px;}.sf-toolbar-block-config .sf-toolbar-icon .sf-toolbar-value {    margin-left: 4px;}.sf-toolbar-block:hover,.sf-toolbar-block.hover {    position: relative;}.sf-toolbar-block:hover .sf-toolbar-icon,.sf-toolbar-block.hover .sf-toolbar-icon {    background-color: #444;    position: relative;    z-index: 10002;}.sf-toolbar-block-ajax.hover .sf-toolbar-info {    z-index: 10001;}.sf-toolbar-block:hover .sf-toolbar-info,.sf-toolbar-block.hover .sf-toolbar-info {    display: block;    padding: 10px;    max-width: 525px;    max-height: 480px;    word-wrap: break-word;    overflow: hidden;    overflow-y: auto;}.sf-toolbar-info-piece b.sf-toolbar-ajax-info {    color: #F5F5F5;}.sf-toolbar-ajax-requests {    table-layout: auto;    width: 100%;}.sf-toolbar-ajax-requests td {    background-color: #444;    border-bottom: 1px solid #777;    color: #F5F5F5;    font-size: 12px;    padding: 4px;}.sf-toolbar-ajax-requests tr:last-child td {    border-bottom: 0;}.sf-toolbar-ajax-requests th {    background-color: #222;    border-bottom: 0;    color: #AAA;    font-size: 11px;    padding: 4px;}.sf-ajax-request-url {    max-width: 250px;    line-height: 9px;    overflow: hidden;    text-overflow: ellipsis;}.sf-toolbar-ajax-requests .sf-ajax-request-url a {    text-decoration: none;}.sf-toolbar-ajax-requests .sf-ajax-request-url a:hover {    text-decoration: underline;}.sf-ajax-request-duration {    text-align: right;}.sf-ajax-request-loading {    animation: sf-blink .5s ease-in-out infinite;}@keyframes sf-blink {    0% { background: #222; }    50% { background: #444; }    100% { background: #222; }}.sf-toolbar-block.sf-toolbar-block-dump .sf-toolbar-info {    max-width: none;    width: 100%;    position: fixed;    box-sizing: border-box;    left: 0;}.sf-toolbar-block-dump pre.sf-dump {    background-color: #222;    border-color: #777;    border-radius: 0;    margin: 6px 0 12px 0;}.sf-toolbar-block-dump pre.sf-dump:last-child {    margin-bottom: 0;}.sf-toolbar-block-dump pre.sf-dump .sf-dump-search-wrapper {    margin-bottom: 5px;}.sf-toolbar-block-dump pre.sf-dump span.sf-dump-search-count {    color: #333;    font-size: 12px;}.sf-toolbar-block-dump .sf-toolbar-info-piece {    display: block;}.sf-toolbar-block-dump .sf-toolbar-info-piece .sf-toolbar-file-line {    color: #AAA;    margin-left: 4px;}.sf-toolbar-block-dump .sf-toolbar-info img {    display: none;}/* Responsive Design */.sf-toolbar-icon .sf-toolbar-label,.sf-toolbar-icon .sf-toolbar-value {    display: none;}.sf-toolbar-block-config .sf-toolbar-icon .sf-toolbar-label {    display: inline-block;}/* Legacy Design - these styles are maintained to make old panels look   a bit better on the new toolbar */.sf-toolbar-block .sf-toolbar-info-piece-additional-detail {    color: #AAA;    font-size: 12px;}.sf-toolbar-status-green .sf-toolbar-info-piece-additional-detail,.sf-toolbar-status-yellow .sf-toolbar-info-piece-additional-detail,.sf-toolbar-status-red .sf-toolbar-info-piece-additional-detail {    color: #FFF;}@media (min-width: 768px) {    .sf-toolbar-icon .sf-toolbar-label,    .sf-toolbar-icon .sf-toolbar-value {        display: inline;    }    .sf-toolbar-block .sf-toolbar-icon img,    .sf-toolbar-block .sf-toolbar-icon svg {        top: 6px;    }    .sf-toolbar-block-time .sf-toolbar-icon svg,    .sf-toolbar-block-memory .sf-toolbar-icon svg {        display: none;    }    .sf-toolbar-block-time .sf-toolbar-icon svg + span,    .sf-toolbar-block-memory .sf-toolbar-icon svg + span {        margin-left: 0;    }    .sf-toolbar-block .sf-toolbar-icon {        padding: 0 10px;    }    .sf-toolbar-block-time .sf-toolbar-icon {        padding-right: 5px;    }    .sf-toolbar-block-memory .sf-toolbar-icon {        padding-left: 5px;    }    .sf-toolbar-block-request .sf-toolbar-icon {        padding-left: 0;        padding-right: 0;    }    .sf-toolbar-block-request .sf-toolbar-label {        margin-left: 5px;    }    .sf-toolbar-block-request .sf-toolbar-status + svg {        margin-left: 5px;    }    .sf-toolbar-block-request .sf-toolbar-icon svg + .sf-toolbar-label {        margin-left: 0;     }    .sf-toolbar-block-request .sf-toolbar-label + .sf-toolbar-value {        margin-right: 10px;    }    .sf-toolbar-block-request:hover .sf-toolbar-info {        max-width: none;    }    .sf-toolbar-block .sf-toolbar-info-piece b {        font-size: 12px;    }    .sf-toolbar-block .sf-toolbar-info-piece span {        font-size: 13px;    }    .sf-toolbar-block-right {        float: right;        margin-left: 0;        margin-right: 0;    }}@media (min-width: 1024px) {    .sf-toolbar-block .sf-toolbar-info-piece-additional,    .sf-toolbar-block .sf-toolbar-info-piece-additional-detail {        display: inline;    }    .sf-toolbar-block .sf-toolbar-info-piece-additional:empty,    .sf-toolbar-block .sf-toolbar-info-piece-additional-detail:empty {        display: none;    }}/***** Error Toolbar *****/.sf-error-toolbar .sf-toolbarreset {    background: #222;    color: #f5f5f5;    font: 13px/36px Arial, sans-serif;    height: 36px;    padding: 0 15px;    text-align: left;}.sf-error-toolbar .sf-toolbarreset svg {    height: auto;}.sf-error-toolbar .sf-toolbarreset a {    color: #99cdd8;    margin-left: 5px;    text-decoration: underline;}.sf-error-toolbar .sf-toolbarreset a:hover {    text-decoration: none;}.sf-error-toolbar .sf-toolbarreset .sf-toolbar-icon {    float: left;    padding: 5px 0;    margin-right: 10px;}.sf-full-stack {    left: 0px;    font-size: 12px;}/***** Media query print: Do not print the Toolbar. *****/@media print {    .sf-toolbar {        display: none !important;    }}</style><script nonce="e49047fc85fdba37f346a9e7d9366a31">/*<![CDATA[*/    (function () {        Sfjs.loadToolbar('a5c960');    })();/*]]>*/</script>
+</body>
+</html>
+{% endblock %}
+>>>>>>> Stashed changes

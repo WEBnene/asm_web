@@ -5,11 +5,16 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Mixishop{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="icon" href="{{ asset('images/logo.ico') }}" type="image/x-icon" />
     </head>
     <body>
         {% block body %}
         {% endblock %}
         {% block javascripts %}{% endblock %}
+        {% block footer %}
+			<div class="container mt-3 text-center">
+				<p class="alert alert-light h6">LE THI THANH HUYEN - ASSIGNMENT WEBG301 - HUYNH THI HOANG HAO</p>
+			</div>
+		{% endblock %}
     </body>
 </html>
