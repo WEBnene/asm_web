@@ -1,76 +1,8 @@
+{% extends 'base.html.twig' %}
 
-<header>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css">
-</head>
-</header>
-<body> 
-      <section class="myheader bg-light" >
-            <div class="container ">
-                <div class="row">
-                    <div class="col-md-2 py-2">
-                        <img src="/images/logo.png" class="img-fluid" style="width:120px;height:72px; alt="Logo">
-                    </div>
-                    <div class="col-md-7 py-4">
-                       <div>
-                          <ul class="nav justify-content-center">
-                          <li class="nav-item">
-                              <a class="nav-link" href="/home">Home</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="/customer/">Customers</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="/staff/">Staffs</a
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="/category/">Category</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="/bill/">Bill</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="/product/">Product</a>
-                            </li>
-                          </ul> 
-                      </div>
-                    </div>
-                    <div class="col-md-3 py-4">
-                      <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search product" aria-label="Search product">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                      </form>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js" ></script>
-<script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap5.min.js" ></script>
-    <script>
-    $(document).ready(function() {
-      $('#customer').DataTable();
-    });
-    </script>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Customer index</title>
-                <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    </head>
-    <style>
-    h1 {
-    color: #FFFFFF;
-    font-family: verdana;
-    font-size: 200%;
-    }
-    body {
-    background-color: #85DDD1;
-    }
-    </style>
+{% block title %}Customer index{% endblock %}
 
+{% block body %}
     <h1>Customer list</h1>
 
     <table class="table">
@@ -85,216 +17,25 @@
             </tr>
         </thead>
         <tbody>
-                    <tr>
-                <td>1</td>
-                <td>Bernie</td>
-                <td>Richard</td>
-                <td>1968-08-02</td>
-                <td>0012479648</td>
+        {% for customer in customers %}
+            <tr>
+                <td>{{ customer.id }}</td>
+                <td>{{ customer.FirstName }}</td>
+                <td>{{ customer.LastName }}</td>
+                <td>{{ customer.Birthday ? customer.Birthday|date('Y-m-d') : '' }}</td>
+                <td>{{ customer.PhoneNumber }}</td>
                 <td>
-                    <a href="/customer/1">Show</a>
-                    <a href="/customer/1/edit">Edit</a>
+                    <a href="{{ path('app_customer_show', {'id': customer.id}) }}">Show</a>
+                    <a href="{{ path('app_customer_edit', {'id': customer.id}) }}">Edit</a>
                 </td>
             </tr>
-                    <tr>
-                <td>2</td>
-                <td>Elias</td>
-                <td>Frank</td>
-                <td>1999-09-20</td>
-                <td>0015478963</td>
-                <td>
-                    <a href="/customer/2">Show</a>
-                    <a href="/customer/2/edit">Edit</a>
-                </td>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
             </tr>
-                    <tr>
-                <td>3</td>
-                <td>Airgas</td>
-                <td>Richard</td>
-                <td>1974-06-24</td>
-                <td>0015423678</td>
-                <td>
-                    <a href="/customer/3">Show</a>
-                    <a href="/customer/3/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>4</td>
-                <td>Emmitt</td>
-                <td>Benally</td>
-                <td>1993-11-20</td>
-                <td>0019550654</td>
-                <td>
-                    <a href="/customer/4">Show</a>
-                    <a href="/customer/4/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>5</td>
-                <td>Natalie</td>
-                <td>Poli</td>
-                <td>1990-10-04</td>
-                <td>0014578912</td>
-                <td>
-                    <a href="/customer/5">Show</a>
-                    <a href="/customer/5/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>6</td>
-                <td>Marcelle</td>
-                <td>Griego</td>
-                <td>1990-10-04</td>
-                <td>0017894264</td>
-                <td>
-                    <a href="/customer/6">Show</a>
-                    <a href="/customer/6/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>7</td>
-                <td>Zada</td>
-                <td>Attwood</td>
-                <td>1982-10-01</td>
-                <td>0019876354</td>
-                <td>
-                    <a href="/customer/7">Show</a>
-                    <a href="/customer/7/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>8</td>
-                <td>Hai</td>
-                <td>Everton</td>
-                <td>1985-10-01</td>
-                <td>0011246792</td>
-                <td>
-                    <a href="/customer/8">Show</a>
-                    <a href="/customer/8/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>9</td>
-                <td>Lino</td>
-                <td>Subia</td>
-                <td>1985-12-21</td>
-                <td>001354268</td>
-                <td>
-                    <a href="/customer/9">Show</a>
-                    <a href="/customer/9/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>10</td>
-                <td>Rico</td>
-                <td>Peer</td>
-                <td>1984-10-01</td>
-                <td>0014897651</td>
-                <td>
-                    <a href="/customer/10">Show</a>
-                    <a href="/customer/10/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>11</td>
-                <td>Teddy</td>
-                <td>Hobby</td>
-                <td>1975-10-01</td>
-                <td>0011428469</td>
-                <td>
-                    <a href="/customer/11">Show</a>
-                    <a href="/customer/11/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>12</td>
-                <td>Oren</td>
-                <td>Perlman</td>
-                <td>1988-10-01</td>
-                <td>0016429758</td>
-                <td>
-                    <a href="/customer/12">Show</a>
-                    <a href="/customer/12/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>13</td>
-                <td>Brett</td>
-                <td>Brickley</td>
-                <td>1980-10-01</td>
-                <td>0014793571</td>
-                <td>
-                    <a href="/customer/13">Show</a>
-                    <a href="/customer/13/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>14</td>
-                <td>Kristian</td>
-                <td>Engberg</td>
-                <td>1981-10-03</td>
-                <td>0019854673</td>
-                <td>
-                    <a href="/customer/14">Show</a>
-                    <a href="/customer/14/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>15</td>
-                <td>Carri</td>
-                <td>Knapik</td>
-                <td>1972-02-02</td>
-                <td>0012439765</td>
-                <td>
-                    <a href="/customer/15">Show</a>
-                    <a href="/customer/15/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>16</td>
-                <td>Rema</td>
-                <td>Revelle</td>
-                <td>1970-05-01</td>
-                <td>0015369874</td>
-                <td>
-                    <a href="/customer/16">Show</a>
-                    <a href="/customer/16/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>17</td>
-                <td>Taina</td>
-                <td>Achenbach</td>
-                <td>1994-10-01</td>
-                <td>0013214587</td>
-                <td>
-                    <a href="/customer/17">Show</a>
-                    <a href="/customer/17/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>18</td>
-                <td>Yvonne</td>
-                <td>Mccalla</td>
-                <td>1992-03-02</td>
-                <td>0014579358</td>
-                <td>
-                    <a href="/customer/18">Show</a>
-                    <a href="/customer/18/edit">Edit</a>
-                </td>
-            </tr>
-                    <tr>
-                <td>19</td>
-                <td>Nisha</td>
-                <td>Markwell</td>
-                <td>1994-04-04</td>
-                <td>00179638462</td>
-                <td>
-                    <a href="/customer/19">Show</a>
-                    <a href="/customer/19/edit">Edit</a>
-                </td>
-            </tr>
-                </tbody>
+        {% endfor %}
+        </tbody>
     </table>
 
-    <a href="/customer/new">Create new</a>
+    <a href="{{ path('app_customer_new') }}">Create new</a>
+{% endblock %}
