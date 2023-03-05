@@ -1,76 +1,8 @@
+{% extends 'base.html.twig' %}
 
-<header>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css">
-</head>
-</header>
-<body> 
-      <section class="myheader bg-light" >
-            <div class="container ">
-                <div class="row">
-                    <div class="col-md-2 py-2">
-                        <img src="/images/logo.png" class="img-fluid" style="width:120px;height:72px; alt="Logo">
-                    </div>
-                    <div class="col-md-7 py-4">
-                       <div>
-                          <ul class="nav justify-content-center">
-                          <li class="nav-item">
-                              <a class="nav-link" href="/home">Home</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="/customer/">Customers</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="/staff/">Staffs</a
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="/category/">Category</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="/bill/">Bill</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="/product/">Product</a>
-                            </li>
-                          </ul> 
-                      </div>
-                    </div>
-                    <div class="col-md-3 py-4">
-                      <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search product" aria-label="Search product">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                      </form>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js" ></script>
-<script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap5.min.js" ></script>
-    <script>
-    $(document).ready(function() {
-      $('#customer').DataTable();
-    });
-    </script>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Customer index</title>
-                <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    </head>
-    <style>
-    h1 {
-    color: #FFFFFF;
-    font-family: verdana;
-    font-size: 200%;
-    }
-    body {
-    background-color: #85DDD1;
-    }
-    </style>
+{% block title %}Product index{% endblock %}
 
+{% block body %}
     <h1>Customer list</h1>
 
     <table class="table">
