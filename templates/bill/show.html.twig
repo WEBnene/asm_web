@@ -8,7 +8,7 @@
     <table class="table">
         <tbody>
             <tr>
-                <th>ID</th>
+                <th>Id</th>
                 <td>{{ bill.id }}</td>
             </tr>
             <tr>
@@ -22,9 +22,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_bill_index') }}">Back to list</a>
+    <a href="{{ path('app_bill_index') }}">back to list</a>
 
-    <a href="{{ path('app_bill_edit', {'id': bill.id}) }}">Edit</a>
+    <a href="{{ path('app_bill_edit', {'id': bill.id}) }}">edit</a>
 
     {{ include('bill/_delete_form.html.twig') }}
 {% endblock %}

@@ -10,6 +10,8 @@
             <tr>
                 <th>ID</th>
                 <th>Discount</th>
+                <th>Customer</th>
+                <th>Staff</th>
                 <th>Date</th>
                 <th>Actions</th>
             </tr>
@@ -19,6 +21,8 @@
             <tr>
                 <td>{{ bill.id }}</td>
                 <td>{{ bill.Discount }}</td>
+                <td>{{ bill.customer.FirstName}}</td>
+                <td>{{ bill.staff.FirstName}}</td>
                 <td>{{ bill.Date ? bill.Date|date('Y-m-d') : '' }}</td>
                 <td>
                     <a href="{{ path('app_bill_show', {'id': bill.id}) }}">Show</a>
