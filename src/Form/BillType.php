@@ -14,9 +14,9 @@ class BillType extends AbstractType
         $builder
             ->add('Discount')
             ->add('Date')
+            ->add('BillDetail')
             ->add('Customer')
             ->add('Staff')
-            ->add('Product')
         ;
     }
 

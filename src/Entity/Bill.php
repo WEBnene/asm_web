@@ -20,6 +20,11 @@ class Bill
     private $id;
 
     /**
+     * @ORM\ManyToMany(targetEntity=BillDetail::class)
+     */
+    private $BillDetail;
+
+    /**
      * @ORM\ManyToOne(targetEntity=Customer::class)
      * @ORM\JoinColumn(nullable=false)
      */
@@ -41,19 +46,38 @@ class Bill
      */
     private $Date;
 
-    /**
-     * @ORM\ManyToMany(targetEntity=Product::class)
-     */
-    private $Product;
-
     public function __construct()
     {
-        $this->Product = new ArrayCollection();
+        $this->BillDetail = new ArrayCollection();
     }
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    /**
+     * @return Collection<int, BillDetail>
+     */
+    public function getBillDetail(): Collection
+    {
+        return $this->BillDetail;
+    }
+
+    public function addBillDetail(BillDetail $billDetail): self
+    {
+        if (!$this->BillDetail->contains($billDetail)) {
+            $this->BillDetail[] = $billDetail;
+        }
+
+        return $this;
+    }
+
+    public function removeBillDetail(BillDetail $billDetail): self
+    {
+        $this->BillDetail->removeElement($billDetail);
+
+        return $this;
     }
 
     public function getCustomer(): ?Customer
@@ -100,30 +124,6 @@ class Bill
     public function setDate(\DateTimeInterface $Date): self
     {
         $this->Date = $Date;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Product>
-     */
-    public function getProduct(): Collection
-    {
-        return $this->Product;
-    }
-
-    public function addProduct(Product $product): self
-    {
-        if (!$this->Product->contains($product)) {
-            $this->Product[] = $product;
-        }
-
-        return $this;
-    }
-
-    public function removeProduct(Product $product): self
-    {
-        $this->Product->removeElement($product);
 
         return $this;
     }
