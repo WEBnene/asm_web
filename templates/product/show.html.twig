@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Product{% endblock %}
+{% block title %}Product Information{% endblock %}
 
 {% block body %}
-    <h1>Product</h1>
+    <h1>Product Information</h1>
 
     <table class="table">
         <tbody>
@@ -14,6 +14,10 @@
             <tr>
                 <th>Seri</th>
                 <td>{{ product.Seri }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ product.category.id }}</td>
             </tr>
             <tr>
                 <th>Name</th>
